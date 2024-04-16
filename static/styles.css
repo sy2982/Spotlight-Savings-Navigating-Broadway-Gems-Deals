@@ -1,0 +1,48 @@
+.navbar {
+    background-color: #f8f9fa; /* Custom light grey background */
+    padding: .5rem 1rem;
+    margin-bottom: 20px;
+}
+
+.navbar .container-fluid {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.navbar-brand {
+    color: #333;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    font-size: 1.25rem;
+    margin-right: 1rem; /* Space between brand links */
+}
+
+.navbar-brand:hover {
+    color: #000;
+}
+
+/* Optional: Styles for search form if you want to include it */
+.nav-item form {
+    display: flex;
+}
+
+.nav-item input[type="search"] {
+    padding: .375rem .75rem;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    margin-right: .5rem; /* Space between input and button */
+}
+
+.nav-item button {
+    padding: .375rem .75rem;
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+
+.nav-item button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Spotlight Savings{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Additional head content can be added by child templates -->
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('home') }}">Spotlight Savings</a>
+            <a class="navbar-brand" >Discover Your Show</a>
+            <a class="navbar-brand" >Find Tickets</a>
+            <a class="navbar-brand" href="{{ url_for('quiz', quiz_id=1) }}">Start Quiz</a>
+
+        </div>
+    </nav>
+
+
+    <!-- Content unique to each page -->
+    {% block content %}{% endblock %}
+
+    <!-- Scripts can be added by child templates -->
+    {% block scripts %}{% endblock %}
+</body>
+</html>

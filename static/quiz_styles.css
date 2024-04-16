@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f5f5f5;
+}
+
+.quiz-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.options-container {
+    margin: 20px 0;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.option input[type="radio"] {
+    opacity: 0; /* Make the default radio button invisible */
+    position: absolute;
+}
+
+.option-text {
+    padding-left: 10px; /* Give some space between custom radio and text */
+}
+
+.checkmark {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #eee;
+    display: inline-block;
+    margin-right: 5px; /* Add space between checkmark and label text */
+}
+
+.option:hover .checkmark,
+.option input[type="radio"]:checked ~ .checkmark {
+    background-color: #ddd; /* Change background color on hover or checked */
+}
+
+.option input[type="radio"]:checked ~ .checkmark:after {
+    content: "";
+    display: block;
+    margin: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #2196F3; /* Change inner circle color when checked */
+}
+
+
+#submit-btn {
+    background-color: #e7e7e7;
+    color: black;
+    padding: 14px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.prev-next-btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.prev-next-btn:hover {
+    background-color: #45a049;
+}
+#submit-btn.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#submit-btn:hover.active {
+    background-color: #45a049;
+}
+.results-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+.results-list {
+    list-style: none;
+    padding: 0;
+}
+
+.result-item {
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.result-item.correct {
+    border-left: 5px solid green;
+}
+
+.result-item.incorrect {
+    border-left: 5px solid red;
+}
