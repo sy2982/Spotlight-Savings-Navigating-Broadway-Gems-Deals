@@ -16,7 +16,7 @@ user_responses = {}
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('index.html')
 
 @app.route('/quiz/<int:quiz_id>', methods=['GET', 'POST'])
 def quiz(quiz_id):
