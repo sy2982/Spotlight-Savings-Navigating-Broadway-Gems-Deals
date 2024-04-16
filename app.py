@@ -48,6 +48,13 @@ def results():
         })
     return render_template('quiz_results.html', results=results_data)
 
+@app.route('/discover_your_show')
+def discover_your_show():
+    return render_template('discover_your_show.html')
+
+@app.route('/find_tickets')
+def find_tickets():
+    return render_template('find_tickets.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

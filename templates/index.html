@@ -6,12 +6,12 @@ Spotlight Savings: Navigating Broadway Gems & Deals
 
 {% block content %}
 <div class="container">
-    <div class="button-container" style="display: flex; flex-direction: column; align-items: center; margin-top: 20%;">
+    <div class="buttons-center" style="display: flex; flex-direction: column; align-items: center; margin-top: 20%;">
         <!-- Header tag with the title -->
         <h1>Spotlight Savings: Navigating Broadway Gems & Deals</h1>
 
         <!-- Button to Discover Your Show -->
-        <button class="btn btn-primary btn-lg">
+        <button class="button-style" onclick="window.location.href='{{ url_for('discover_your_show') }}'">
             Discover Your Show
         </button>
 
@@ -19,7 +19,7 @@ Spotlight Savings: Navigating Broadway Gems & Deals
         <div style="margin: 20px;"></div>
 
         <!-- Button to Find Tickets -->
-        <button class="btn btn-secondary btn-lg">
+        <button class="button-style" onclick="window.location.href='{{ url_for('find_tickets') }}'">
             Find Tickets
         </button>
     </div>

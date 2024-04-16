@@ -3,7 +3,7 @@
     padding: 0;
     border: 0 solid transparent;
   }
-  
+
 .navbar {
     background-color: #f8f9fa; /* Custom light grey background */
     padding: .5rem 1rem;
@@ -50,5 +50,22 @@
 }
 
 .nav-item button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.button-style {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white; /* Text color */
+    margin-bottom: 20px; /* Spacing between buttons */
+    background-color: #007bff; /* Blue color */
+}
+
+/* Hover effect */
+.button-style:hover {
     background-color: #0056b3; /* Darker blue on hover */
 }
