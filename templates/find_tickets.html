@@ -7,6 +7,38 @@ Find Tickets
 {% block content %}
 <div class="container">
     <h2>Find Tickets</h2>
-    <p>Looking for tickets to your favorite Broadway show?</p>
+    <p>Looking for tickets to your favorite Broadway show? Choose from a variety of options to find the best seats at the best prices:</p>
+    
+    <!-- Buttons for different ticket sources -->
+    <div class="button-group" style="display: flex; flex-direction: column; align-items: center;">
+        <!-- Button for Official Ticket Sources -->
+        <button class="button-style" onclick="window.location.href='{{ url_for('official_ticket_sources') }}'">
+            Official Ticket Sources
+        </button>
+        
+        <!-- Add some spacing between the buttons -->
+        <div style="margin: 10px;"></div>
+        
+        <!-- Button for Ticket Lotteries -->
+        <button class="button-style" onclick="window.location.href='{{ url_for('ticket_lotteries') }}'">
+            Ticket Lotteries
+        </button>
+        
+        <!-- Add some spacing between the buttons -->
+        <div style="margin: 10px;"></div>
+        
+        <!-- Button for Rush Tickets & SRO -->
+        <button class="button-style" onclick="window.location.href='{{ url_for('rush_tickets_sro') }}'">
+            Rush Tickets & SRO
+        </button>
+        
+        <!-- Add some spacing between the buttons -->
+        <div style="margin: 10px;"></div>
+        
+        <!-- Button for Other Sources -->
+        <button class="button-style" onclick="window.location.href='{{ url_for('other_sources') }}'">
+            Other Sources
+        </button>
+    </div>
 </div>
 {% endblock %}

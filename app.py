@@ -56,5 +56,21 @@ def discover_your_show():
 def find_tickets():
     return render_template('find_tickets.html')
 
+@app.route('/find_tickets/official_ticket_sources')
+def official_ticket_sources():
+    return render_template('official_ticket_sources.html')
+
+@app.route('/find_tickets/ticket_lotteries')
+def ticket_lotteries():
+    return render_template('ticket_lotteries.html')
+
+@app.route('/find_tickets/rush_tickets_sro')
+def rush_tickets_sro():
+    return render_template('rush_tickets_sro.html')
+
+@app.route('/find_tickets/other_sources')
+def other_sources():
+    return render_template('other_sources.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
