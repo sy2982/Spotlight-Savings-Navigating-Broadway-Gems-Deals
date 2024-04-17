@@ -11,8 +11,8 @@
     <nav class="navbar">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ url_for('home') }}">Spotlight Savings</a>
-            <a class="navbar-brand" >Discover Your Show</a>
-            <a class="navbar-brand" >Find Tickets</a>
+            <a class="navbar-brand" href="{{ url_for('discover_your_show') }}">Discover Your Show</a>
+            <a class="navbar-brand" href="{{ url_for('find_tickets') }}">Find Tickets</a>
             <a class="navbar-brand" href="{{ url_for('quiz', quiz_id=1) }}">Start Quiz</a>
 
         </div>
