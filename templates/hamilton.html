@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Musicals
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Hamilton</h1>
+        </div>
+        <div class="col-md-8">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/watch?v=49Sn-6gPnwM" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col-md-4 buttons-container">
+            <!-- Replace `#` with your actual links -->
+            <a href="https://hamiltonmusical.com/new-york/?gad_source=1&gclid=CjwKCAjw_LOwBhBFEiwAmSEQAS6ZFAcTQLrmLo_0REHboC2KeSJxF4AkDKi7bvOulxyN9BzTaTJ-axoCr8wQAvD_BwE" class="btn btn-outline-secondary">Hamilton Official Website</a>
+            <a href="https://hamiltonmusical.com/new-york/cast/" class="btn btn-outline-secondary">Cast & Creative</a>
+            <a href="https://www.nytimes.com/2015/08/07/theater/review-hamilton-young-rebels-changing-history-and-theater.html" class="btn btn-outline-secondary">Hamilton Reviews</a>
+            <a href="https://hamiltonmusical.com/new-york/tickets/" class="btn btn-outline-secondary">Hamilton Tickets</a>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}

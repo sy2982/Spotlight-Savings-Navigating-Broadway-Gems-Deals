@@ -52,6 +52,26 @@ def results():
 def discover_your_show():
     return render_template('discover_your_show.html')
 
+@app.route('/discover_your_show/drama')
+def explore_drama():
+    return render_template('drama.html')
+
+@app.route('/discover_your_show/revival')
+def explore_revival():
+    return render_template('revival.html')
+
+@app.route('/discover_your_show/comedy')
+def explore_comedy():
+    return render_template('comedy.html')
+
+@app.route('/discover_your_show/musicals')
+def explore_musicals():
+    return render_template('musicals.html')
+
+@app.route('/discover_your_show/musicals/hamilton')
+def explore_hamilton():
+    return render_template('hamilton.html')
+
 @app.route('/find_tickets')
 def find_tickets():
     return render_template('/tickets/find_tickets.html')

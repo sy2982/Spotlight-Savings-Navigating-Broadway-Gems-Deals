@@ -6,17 +6,19 @@ Spotlight Savings: Navigating Broadway Gems & Deals
 
 {% block content %}
 <div class="container">
-    <div class="buttons-center" style="display: flex; flex-direction: column; align-items: center; margin-top: 20%;">
+    <div class="buttons-center" style="display: flex; flex-direction: column; align-items: center;">
         <!-- Header tag with the title -->
         <h1>Spotlight Savings: Navigating Broadway Gems & Deals</h1>
-
+        <div style="margin: 10px;"></div>
+        <img src="https://images2.minutemediacdn.com/image/upload/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/shape/cover/sport/81299-istock-458410201-860f9e934fae019f925761d9e99bc256.jpg" class="img-fluid" alt="Columbia Dining">
+        <div style="margin: 20px;"></div>
         <!-- Button to Discover Your Show -->
         <button class="button-style" onclick="window.location.href='{{ url_for('discover_your_show') }}'">
             Discover Your Show
         </button>
 
         <!-- Add some spacing between the buttons -->
-        <div style="margin: 20px;"></div>
+        <div style="margin: 10px;"></div>
 
         <!-- Button to Find Tickets -->
         <button class="button-style" onclick="window.location.href='{{ url_for('find_tickets') }}'">
@@ -24,4 +26,5 @@ Spotlight Savings: Navigating Broadway Gems & Deals
         </button>
     </div>
 </div>
+
 {% endblock %}
