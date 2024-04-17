@@ -68,6 +68,10 @@ def explore_comedy():
 def explore_musicals():
     return render_template('musicals.html')
 
+@app.route('/discover_your_show/musical/intro')
+def explore_musical_intro():
+    return render_template('musical_intro.html')
+
 @app.route('/discover_your_show/musicals/hamilton')
 def explore_hamilton():
     return render_template('hamilton.html')
