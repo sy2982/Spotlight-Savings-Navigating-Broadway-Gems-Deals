@@ -1,0 +1,75 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Find Tickets
+{% endblock %}
+
+{% block content %}
+<div class="container">
+ 
+    <h2>Learn To Find Tickets</h2>
+    <p>Here are ways to find tickets. Press on them to learn more.</p>
+
+    <button class="accordion">Official Ticket Sources</button>
+    <div class="panel">
+        <p> - Your Path to the Show</p>
+        <ol>
+            <li>Begin by searching for the show's name in Google.</li>
+            <li>Navigate to the show’s official website for accurate details and secure purchasing.</li>
+            <li>On the official website, explore seating options to find the perfect spot. Look for 'Best Value' or 'Discount' tags for savings.</li>
+            <li>Proceed to checkout. Ensure the website’s security by checking for 'https://' in the URL and a lock icon near the address bar.</li>
+            <li>Finalize your purchase and receive a confirmation email with your tickets.</li>
+        </ol>
+    </div>
+
+    <button class="accordion">Ticket Lotteries</button>
+    <div class="panel">
+        <p> - Your Chance for the Spotlight</p>
+        <ol>
+            <li>Review the list of shows offering digital lotteries. Find ones you’re interested in and go to the lottery websites.</li>
+            <li>Choose a show and click 'Enter Lottery' to begin the process. Submit your entry.</li>
+            <li>Lottery entries close 24-48 hours before the show. Keep an eye on your email for the results.</li>
+            <li>Winners are notified a few hours before the show. Check if you've won and proceed to purchase.</li>
+            <li>If you've won, follow the link in your winner’s email to secure and pay for your tickets.</li>
+        </ol>
+    </div>
+
+    <button class="accordion">Rush Tickets & Standing Room Only (SRO)</button>
+    <div class="panel">
+    <p>Rush tickets are offered on the day of the performance, usually when the box office opens. They are sold at a discount, but quantities are limited and seats are often first come, first served. Some theaters have general rush tickets, while others offer Student Rush tickets, requiring a valid student ID.</p>
+        <p>When a show is sold out, theaters sometimes offer SRO tickets at a discounted rate. These are exactly what they sound like—you'll be watching the performance from a designated standing area. These are usually sold on the day of the performance, directly from the box office.</p>
+    </div>
+
+    <button class="accordion">Other Sources/Websites</button>
+    <div class="panel">
+    <p>TodayTix: An app that offers discounted and full-price last-minute tickets. You can enter lotteries, purchase rush tickets, and even get tickets for shows weeks in advance. It’s a convenient, mobile-first approach to getting Broadway tickets.</p>
+        <p>StubHub, SeatGeek, and Vivid Seats: These platforms sell tickets from individuals or brokers, often at a markup. While you might find tickets to sold-out shows, be prepared to pay above face value. Always use reputable sites to avoid scams.</p>
+        <p>B’Way Rush: <a href="https://bwayrush.com/" target="_blank">https://bwayrush.com/</a></p>
+    </div>
+
+    <button class="accordion">Last Step</button>
+    <div class="panel">
+    <p> Go back to <a href="{{ url_for('discover_your_show') }}" target="_blank">"Discover Your Show"</a> to learn more about broadway shows if you have not already.</p>
+    <p> If you have already done so then go <a href="{{ url_for('quiz', quiz_id=1) }}" target="_blank">HERE</a> to test your knowledge!</p>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+              panel.style.marginTop = "20px";
+              panel.style.marginBottom = "20px";
+            } 
+          });
+        }
+        </script>        
+</div>
+{% endblock %}
