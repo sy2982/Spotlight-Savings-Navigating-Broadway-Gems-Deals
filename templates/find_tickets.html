@@ -14,11 +14,11 @@ Find Tickets
     <div class="panel">
         <p> - Your Path to the Show</p>
         <ol>
-            <li>Begin by searching for the show's name in Google.</li>
-            <li>Navigate to the show’s official website for accurate details and secure purchasing.</li>
-            <li>On the official website, explore seating options to find the perfect spot. Look for 'Best Value' or 'Discount' tags for savings.</li>
-            <li>Proceed to checkout. Ensure the website’s security by checking for 'https://' in the URL and a lock icon near the address bar.</li>
-            <li>Finalize your purchase and receive a confirmation email with your tickets.</li>
+            <li><span style="text-decoration: underline; color: red;">Begin by searching</span> for the show's name in Google.</li>
+            <li>Navigate to the show’s <span style="text-decoration: underline; color: red;">official website</span> for accurate details and secure purchasing.</li>
+            <li>On the official website, explore seating options to find the perfect spot. Look for <span style="text-decoration: underline; color: red;">'Best Value'</span> or <span style="text-decoration: underline; color: red;">'Discount'</span> tags for savings.</li>
+            <li>Proceed to checkout. <span style="text-decoration: underline; color: red;">Ensure the website’s security</span> by checking for 'https://' in the URL and a lock icon near the address bar.</li>
+            <li>Finalize your purchase and receive a <span style="text-decoration: underline; color: red;">confirmation email</span> with your tickets.</li>
         </ol>
     </div>
 
@@ -26,18 +26,18 @@ Find Tickets
     <div class="panel">
         <p> - Your Chance for the Spotlight</p>
         <ol>
-            <li>Review the list of shows offering digital lotteries. Find ones you’re interested in and go to the lottery websites.</li>
-            <li>Choose a show and click 'Enter Lottery' to begin the process. Submit your entry.</li>
-            <li>Lottery entries close 24-48 hours before the show. Keep an eye on your email for the results.</li>
-            <li>Winners are notified a few hours before the show. Check if you've won and proceed to purchase.</li>
-            <li>If you've won, follow the link in your winner’s email to secure and pay for your tickets.</li>
+            <li>Review the list of shows offering digital lotteries. Find ones you’re interested in and <span style="text-decoration: underline; color: red;">go to the lottery websites.</span></li>
+            <li>Choose a show and click <span style="text-decoration: underline; color: red;">'Enter Lottery'</span> to begin the process. <span style="text-decoration: underline; color: red;">Submit</span> your entry.</li>
+            <li>Lottery entries close <span style="text-decoration: underline; color: red;">24-48 hours</span> before the show. Keep an eye on your email for the results.</li>
+            <li>Winners are notified a few hours before the show. <span style="text-decoration: underline; color: red;">Check</span> if you've won and proceed to purchase.</li>
+            <li>If you've won, <span style="text-decoration: underline; color: red;">follow the link</span> in your winner’s email to secure and pay for your tickets.</li>
         </ol>
     </div>
 
     <button class="accordion">Rush Tickets & Standing Room Only (SRO)</button>
     <div class="panel">
-    <p>Rush tickets are <span style="text-decoration: underline; color: red;">offered on the day of the performance</span>, usually when the box office opens. They are sold at a discount, but quantities are limited and seats are often first come, first served. Some theaters have general rush tickets, while others offer Student Rush tickets, requiring a valid student ID.</p>
-        <p>When a show is sold out, theaters sometimes offer SRO tickets at a discounted rate. These are exactly what they sound like—you'll be watching the performance from a designated standing area. These are usually sold on the day of the performance, directly from the box office.</p>
+    <p>Rush tickets are <span style="text-decoration: underline; color: red;">offered on the day of the performance</span>, usually when the box office opens. They are sold at a <span style="text-decoration: underline; color: red;">discount</span>, but quantities are limited and seats are often <span style="text-decoration: underline; color: red;">first come, first served</span>. Some theaters have general rush tickets, while others offer <span style="text-decoration: underline; color: red;">Student Rush tickets</span>, requiring a valid student ID.</p>
+        <p>When a show is <span style="text-decoration: underline; color: red;">sold out</span>, theaters sometimes offer SRO tickets at a discounted rate. These are exactly what they sound like—you'll be watching the performance from a <span style="text-decoration: underline; color: red;">designated standing area</span>. These are usually sold on the day of the performance, <span style="text-decoration: underline; color: red;">directly from the box office.</span></p>
     </div>
 
     <button class="accordion">Other Sources/Websites</button>
@@ -49,8 +49,8 @@ Find Tickets
 
     <button class="accordion">Last Step</button>
     <div class="panel">
-    <p> Go back to <a href="{{ url_for('discover_your_show') }}" target="_blank">"Discover Your Show"</a> to learn more about broadway shows if you have not already.</p>
-    <p> If you have already done so then go <a href="{{ url_for('quiz', quiz_id=1) }}" target="_blank">HERE</a> to test your knowledge!</p>
+    <p>If you <span style="text-decoration: underline; color: red;">HAVE NOT</span> already, go back to <a href="{{ url_for('discover_your_show') }}" target="_blank">Discover Your Show</a> to learn more about broadway shows.</p>
+    <p> If you <span style="text-decoration: underline; color: red;">HAVE</span> done so then go <a href="{{ url_for('quiz', quiz_id=1) }}" target="_blank">HERE</a> to test your knowledge!</p>
     </div>
 
     <script>
@@ -63,6 +63,8 @@ Find Tickets
             var panel = this.nextElementSibling;
             if (panel.style.maxHeight) {
               panel.style.maxHeight = null;
+              panel.style.marginTop = "1px";
+              panel.style.marginBottom = "1px";
             } else {
               panel.style.maxHeight = panel.scrollHeight + "px";
               panel.style.marginTop = "20px";
