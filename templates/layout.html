@@ -22,19 +22,27 @@
   {% block head %}{% endblock %}
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{{ url_for('home') }}">Spotlight Savings</a>
-            <a class="navbar-brand" href="{{ url_for('discover_your_show') }}">Discover Your Show</a>
-            <a class="navbar-brand" href="{{ url_for('find_tickets') }}">Find Tickets</a>
-            <a class="navbar-brand" href="{{ url_for('quiz', quiz_id=1) }}">Start Quiz</a>
+    <div class="allButFooter">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ url_for('home') }}">Spotlight Savings</a>
+                <a class="navbar-brand" href="{{ url_for('discover_your_show') }}">Discover Your Show</a>
+                <a class="navbar-brand" href="{{ url_for('find_tickets') }}">Find Tickets</a>
+                <a class="navbar-brand" href="{{ url_for('quiz', quiz_id=1) }}">Start Quiz</a>
+    
+            </div>
+        </nav>
+    
+        <!-- Content unique to each page -->
+        {% block content %}{% endblock %}
+    </div>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Spotlight Savings. All rights reserved.</p>
         </div>
-    </nav>
-
-
-    <!-- Content unique to each page -->
-    {% block content %}{% endblock %}
+    </footer>
 
     <!-- Scripts can be added by child templates -->
     {% block scripts %}{% endblock %}

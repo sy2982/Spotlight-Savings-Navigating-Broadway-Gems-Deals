@@ -5,7 +5,7 @@
   }
 
 .navbar {
-    background-color: #f8f9fa; /* Custom light grey background */
+    background-color: rgb(67, 68, 66); /* Broadway color */
     padding: .5rem 1rem;
     margin-bottom: 20px;
 }
@@ -17,7 +17,7 @@
 }
 
 .navbar-brand {
-    color: #333;
+    color: yellow;
     padding: .5rem 1rem;
     text-decoration: none;
     font-size: 1.25rem;
@@ -25,7 +25,7 @@
 }
 
 .navbar-brand:hover {
-    color: #000;
+    color: orange;
 }
 
 /* Optional: Styles for search form if you want to include it */
@@ -60,14 +60,14 @@
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    color: white; /* Text color */
+    color: rgb(67, 68, 66); /* Broadway color */
     margin-bottom: 20px; /* Spacing between buttons */
-    background-color: #007bff; /* Blue color */
+    background-color: yellow; /* Blue color */
 }
 
 /* Hover effect */
 .button-style:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: orange; /* Darker blue on hover */
 }
 .container {
     width: 80%;
@@ -140,4 +140,16 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+  }
+
+  .allButFooter {
+    min-height: calc(100vh - 40px);
+  }
+  
+  footer {
+    color: yellow;
+    background-color: rgb(67, 68, 66);
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
   }
