@@ -1,10 +1,13 @@
+
+body {
+    background-color: rgb(242, 246, 238); /* Set the background color to yellow */
+}
 .quiz-container {
     max-width: 600px;
     margin: auto;
+    background-color:#fff;
 }
-
 .card {
-    background: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -62,8 +65,8 @@ h1 {
 
 
 #submit-btn {
-    background-color: #e7e7e7;
-    color: black;
+    background-color: rgb(67, 68, 66);
+    color: yellow;
     padding: 14px 20px;
     margin: 10px 0;
     border: none;
@@ -73,9 +76,9 @@ h1 {
 }
 
 .prev-next-btn {
-    background-color: #4CAF50; /* Green */
+    background-color: rgb(67, 68, 66);
+    color: yellow;
     border: none;
-    color: white;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -88,15 +91,16 @@ h1 {
 }
 
 .prev-next-btn:hover {
-    background-color: #45a049;
+   background-color: yellow;
+    color: rgb(67, 68, 66);
 }
 #submit-btn.active {
-    background-color: #4CAF50;
-    color: white;
+    background-color: yellow;
+    color: rgb(67, 68, 66);
 }
 
 #submit-btn:hover.active {
-    background-color: #45a049;
+    background-color: yellow;
 }
 .results-container {
     max-width: 600px;
