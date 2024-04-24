@@ -9,39 +9,56 @@ Musicals
     body {
         background-color: rgb(242, 246, 238);
     }
+    .card:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    .btn {
+        background-color: yellow; 
+        color: black; /* Adjusted the color for visibility */
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+        background-color: #ffcc00; /* Slightly darker yellow on hover */
+    }
 </style>
 <div class="container">
     <h1 class="title">Musicals:</h1>
-    <p class="genre-description" style="background-color: white; font-size: 23px;">
+    <div class="separator-bar" style="height: 3px; background-color: darkgray; margin: 15px 0;"></div>
+    <p style=" font-size: 23px;">
         The quintessential Broadway experience is encapsulated in the musical genre, a celebration of storytelling that marries melody with movement. Beyond mere entertainment, musicals are a composite art form that encapsulates the human condition through an array of expressions, from the exuberant to the poignant.
     </p>
-
-    <h2 class="section-title">Defining the Genre:</h2>
-    <p class="genre-description">
-        At its core, a musical is a theatrical production where songs drive the narrative forward. Unlike plays where dialogue takes precedence, in musicals, the music, lyrics, and dance numbers play a fundamental role in storytelling. Each musical number is crafted to reveal character motivations, advance the plot, or evoke a deeper connection with the audience.
-    </p>
-
-    <h2 class="section-title">Key Components to Know:</h2>
-    <div class="key-components">
-        <p><strong>Book:</strong> The 'book' of a musical refers to the spoken dialogue and the overall plot structure. It sets the foundation upon which songs and dances are built.</p>
-        <p><strong>Score:</strong> The score comprises the music and lyrics, encompassing a variety of styles depending on the show's theme—from classical to contemporary.</p>
-        <p><strong>Choreography:</strong> Dance sequences in musicals often serve as a physical interpretation of the story, enhancing the emotional and narrative impact.</p>
-        <p><strong>Staging:</strong> The use of set design, costumes, and lighting is crucial in creating the spectacle known to Broadway productions, often becoming as iconic as the performances themselves.</p>
+    <button class="accordion" style="font-size: 26px;">Defining the Genre</button>
+    <div class="show-panel">
+        <p style="font-size: 20px;">
+            At its core, a musical is a theatrical production where songs drive the narrative forward. Unlike plays where dialogue takes precedence, in musicals, the music, lyrics, and dance numbers play a fundamental role in storytelling. Each musical number is crafted to reveal character motivations, advance the plot, or evoke a deeper connection with the audience.
+        </p>
     </div>
+    <button class="accordion" style="font-size: 26px;">Key Components to Know</button>
+    <div class="show-panel">
+        <p style="font-size: 20px;">
+            <p style="font-size: 20px;"><strong>Book:</strong> The 'book' of a musical refers to the spoken dialogue and the overall plot structure. It sets the foundation upon which songs and dances are built.</p>
+            <p style="font-size: 20px;"><strong>Score:</strong> The score comprises the music and lyrics, encompassing a variety of styles depending on the show's theme—from classical to contemporary.</p>
+            <p style="font-size: 20px;"><strong>Choreography:</strong> Dance sequences in musicals often serve as a physical interpretation of the story, enhancing the emotional and narrative impact.</p>
+            <p style="font-size: 20px;"><strong>Staging:</strong> The use of set design, costumes, and lighting is crucial in creating the spectacle known to Broadway productions, often becoming as iconic as the performances themselves.</p>
+    </div>
+    <div class="separator-bar" style="height: 3px; background-color: darkgray; margin: 15px 0;"></div>
 
     <h2>Iconic Shows you may want to explore:</h2>
-    <div class="learning-through-broadway">
-        <p>
-            Each show on Broadway offers a unique experience, a lesson in the varied tapestry of human experiences. Whether it's a night of laughter, an encounter with history, or a foray into fantasy, the musical genre promises a profound engagement with art.
+    <p style="font-size: 20px;">
+        We invite you to delve deeper into the details of each show featured in this tutorial. "View Details" to learn about the captivating narratives, the composers' inspirations, and the historical impact of these stellar productions on the world of theatre.
+    </p>
+    <button class="accordion" style="font-size: 26px;">Why Iconic Shows</button>
+    <div class="show-panel">
+        <p style="font-size: 20px;">
+            Each show on Broadway offers a unique experience, a lesson in the varied tapestry of human experiences. Whether it's a night of laughter, an encounter with history, or a foray into fantasy, the musical genre promises a profound engagement.
         </p>
-        <p>
+        <p style="font-size: 20px;">
             As you explore iconic shows, you'll not only be entertained but also educated on the different themes that these masterpieces explore. By attending performances, listening to soundtracks, and reading up on show histories, you embark on a journey of cultural enrichment and artistic appreciation.
         </p>
-        <p>
-            We invite you to delve deeper into the details of each show featured in this tutorial. "View Details" to learn about the captivating narratives, the composers' inspirations, and the historical impact of these stellar productions on the world of theatre.
-        </p>
     </div>
-    <div class="row">
+    <div class="row" style="margin-top: 15px;">
         <div class="col-md-4 mb-3">
             <div class="card">
                 <img src="https://broadwaydirect.com/wp-content/uploads/2015/03/HAM_020_PA_BRAND_REFRESH_TICKETING_ASSETS_BroadwayDirect_1200x675_V1.jpg" class="card-img-bot" alt="hamilton">
@@ -73,6 +90,32 @@ Musicals
             </div>
         </div>
         
-        </div>
+    </div>
+    
 </div>
+
+<script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+    var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+              panel.style.marginTop = "1px";
+              panel.style.marginBottom = "1px";
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+              panel.style.marginTop = "20px";
+              panel.style.marginBottom = "20px";
+            } 
+          });
+        }
+</script>
+    
 {% endblock %}

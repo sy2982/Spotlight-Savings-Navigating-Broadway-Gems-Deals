@@ -94,6 +94,7 @@
 }
 .card .card-img-bot {
     height: 300px;
+    border-radius: 10px;
 }
 
 .musical-button {
@@ -136,7 +137,7 @@
     border: none;
     text-align: left;
     outline: none;
-    font-size: 15px;
+    font-size: 25px;
     transition: 0.4s;
     border-radius: 10px;
 }
@@ -154,6 +155,18 @@
     transition: max-height 0.2s ease-out;
     margin-top: 1px;
     margin-bottom: 1px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.show-panel {
+    padding: 0 10px;
+    background-color: lightgray;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    border-radius: 10px;
 }
 
 .allButFooter {
@@ -193,13 +206,14 @@ body {
 }
 .card {
     background-color: #fff;
+    border-radius: 15px;
 }
 .info {
-    background-color: lightgray;
+    background-color: white;
     color: black;
     margin-bottom: 15px;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 .genre-description, .key-components, .learning-through-broadway {
     margin-bottom: 2rem;
