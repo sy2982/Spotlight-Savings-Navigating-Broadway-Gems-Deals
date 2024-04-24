@@ -168,3 +168,11 @@ footer {
 .panel ul li {
     margin-left: 30px;
 }
+
+body {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.title {
+    font-family: "Playfair Display", serif;
+}
