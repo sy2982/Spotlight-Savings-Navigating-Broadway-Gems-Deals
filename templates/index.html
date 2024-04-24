@@ -5,6 +5,11 @@ Spotlight Savings: Navigating Broadway Gems & Deals
 {% endblock %}
 
 {% block content %}
+<style>
+    body {
+        background-color: rgb(242, 246, 238);
+    }
+</style>
 <div class="container">
     <div class="buttons-center" style="display: flex; flex-direction: column; align-items: center;">
         <!-- Header tag with the title -->
@@ -13,7 +18,7 @@ Spotlight Savings: Navigating Broadway Gems & Deals
         <img src="https://images2.minutemediacdn.com/image/upload/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/shape/cover/sport/81299-istock-458410201-860f9e934fae019f925761d9e99bc256.jpg" class="img-fluid" alt="Columbia Dining">
         <div style="margin: 20px;"></div>
         <!-- Button to Discover Your Show -->
-        <p>You can take a Quiz after learning <span style="text-decoration: underline; color: red;">BOTH</span> topics!</p>
+        <p>You can take a Quiz after learning <span style="text-decoration: underline; color: gray;">BOTH</span> topics!</p>
         <p>Press on a button below to learn more!</p>
         <button class="button-style" onclick="window.location.href='{{ url_for('discover_your_show') }}'">
             Discover Your Show

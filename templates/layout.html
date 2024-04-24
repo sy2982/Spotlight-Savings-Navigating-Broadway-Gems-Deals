@@ -25,7 +25,10 @@
     <div class="allButFooter">
         <nav class="navbar">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{{ url_for('home') }}">Spotlight Savings</a>
+                <a class="navbar-brand-sp" href="{{ url_for('home') }}">
+                    <img src="https://findlogovector.com/wp-content/uploads/2018/07/on-broadway-logo-vector.png" alt="On Broadway Logo" style="height: 35px; margin-right: 5px;">
+                    Spotlight Savings
+                </a>
                 <a class="navbar-brand" href="{{ url_for('discover_your_show') }}">Discover Your Show</a>
                 <a class="navbar-brand" href="{{ url_for('find_tickets') }}">Find Tickets</a>
                 <a class="navbar-brand" href="{{ url_for('quiz', quiz_id=1) }}">Start Quiz</a>

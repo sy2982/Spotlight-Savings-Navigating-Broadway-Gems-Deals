@@ -23,8 +23,18 @@
     font-size: 1.25rem;
     margin-right: 1rem; /* Space between brand links */
 }
+.navbar-brand-sp {
+    color: lightgray;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    font-size: 1.25rem;
+    margin-right: 1rem; /* Space between brand links */
+}
 
 .navbar-brand:hover {
+    color: orange;
+}
+.navbar-brand-sp:hover {
     color: orange;
 }
 
@@ -132,7 +142,7 @@
 }
   
 .active, .accordion:hover {
-    background-color: orange;
+    background-color: yellow;
     color: rgb(67, 68, 66);
 }
   
@@ -175,4 +185,34 @@ body {
 
 .title {
     font-family: "Playfair Display", serif;
+    font-size: 50px;
+}
+.card-title {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+}
+.card {
+    background-color: #fff;
+}
+.info {
+    background-color: lightgray;
+    color: black;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.genre-description, .key-components, .learning-through-broadway {
+    margin-bottom: 2rem;
+    background-color: lightgray;
+    color: black;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.card-body a.btn {
+    background-color: yellow; 
+    color: black; /* Corrected color code for text */
+}
+.section-title {
+    margin-top: 2rem;
 }
