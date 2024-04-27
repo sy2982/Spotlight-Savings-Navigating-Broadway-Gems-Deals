@@ -199,6 +199,11 @@ body {
 .title {
     font-family: "Playfair Display", serif;
     font-size: 50px;
+    text-align: center;
+}
+.intro-text {
+    font-size: 20px;
+    text-align: center;
 }
 .card-title {
     font-family: "Playfair Display", serif;
@@ -272,12 +277,12 @@ body {
     transition: all 0.3s ease;
     color: rgb(67, 68, 66); /* Broadway color */
     margin-bottom: 20px; /* Spacing between buttons */
-    background-color: yellow; /* Blue color */
+    background-color: yellow;
     font-family: "Playfair Display", serif;
 }
 /* Hover effect */
 .button-home:hover {
-    background-color: orange; /* Darker blue on hover */
+    background-color: orange;
 }
 .navigation-btns {
     display: flex;
