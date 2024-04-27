@@ -52,6 +52,7 @@ def results():
 def discover_your_show():
     return render_template('discover_your_show.html')
 
+
 @app.route('/discover_your_show/drama')
 def explore_drama():
     return render_template('drama.html')
@@ -75,6 +76,10 @@ def explore_musical_intro():
 @app.route('/discover_your_show/musicals/hamilton')
 def explore_hamilton():
     return render_template('hamilton.html')
+
+@app.route('/discover_your_show/comedy/intro')
+def explore_comedy_intro():
+    return render_template('comedy_intro.html')
 
 @app.route('/find_tickets')
 def find_tickets():

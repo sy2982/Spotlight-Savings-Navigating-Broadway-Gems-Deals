@@ -1,0 +1,120 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Comedy Shows on Broadway
+{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: rgb(242, 246, 238);
+    }
+    .card:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    .btn {
+        background-color: yellow; 
+        color: black; /* Adjusted the color for visibility */
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+        background-color: #ffcc00; /* Slightly darker yellow on hover */
+    }
+    .show-panel p{
+        font-size: 20px;
+    }
+</style>
+<div class="container">
+    <h1 class="title">Comedy Shows:</h1>
+    <div class="separator-bar" style="height: 3px; background-color: darkgray; margin: 15px 0;"></div>
+    <p class="show-text" style="font-size: 23px; text-align: left;">
+        Laughter is the heartbeat of Broadway comedies, where wit meets whimsy, and satire sparkles on stage. Explore the art of humor and the clever narratives that have been causing uproarious laughter night after night in theaters. Click on each panel to discover more about this joyous genre.
+    </p>
+    <!-- Accordion for "The Essence of Comedy on Broadway" -->
+    <button class="accordion" style="font-size: 26px;">The Essence of Comedy on Broadway</button>
+    <div class="show-panel">
+        <p>This panel delves into what makes Broadway comedies unique and impactful. Comedy on Broadway transcends the mere act of making people laugh. It engages the audience in a dialogue without spoken words, relying on nuances of timing and character delivery that elevate the comedic script. </br> </br>Shows like "The Play That Goes Wrong" exemplify how physical comedy, combined with a cleverly written script, creates a riveting experience that keeps the audience engaged from curtain rise to curtain call. This genre's essence lies in its ability to seamlessly blend humor with layers of narrative depth, turning a night at the theatre into a reflective and rejuvenating experience.</p>
+    </div>
+
+    <!-- Accordion for "A Historical Glimpse" -->
+    <button class="accordion" style="font-size: 26px;">A Historical Glimpse</button>
+    <div class="show-panel">
+        <p>From the slapstick comedy of the early 20th century to the sophisticated social satires of today, Broadway has hosted a kaleidoscope of comedic styles. This panel traces the evolution of comedy in American theatre, spotlighting landmark shows such as "You Can't Take It With You" and "Noises Off." Each of these shows brought new dimensions to comedic storytelling, influencing generations of playwrights and performers. </br> </br>By examining the milestones in the development of Broadway comedy, we can appreciate how historical contexts and shifting societal norms have been reflected and commented upon through laughter and satire.
+        </p>
+    </div>
+
+    <!-- Accordion for "Laughter as a Social Mirror" -->
+    <button class="accordion" style="font-size: 26px;">Laughter as a Social Mirror</button>
+    <div class="show-panel">
+        <p>
+            Comedy has always served as a potent social mirror, reflecting the complexities of human society with humor and wit. This panel explores how Broadway comedies have tackled pressing social issues, from gender roles and racial inequality to political satire and beyond. </br> </br>Shows like "Avenue Q" and "Book of Mormon" not only entertain but also provoke thought by poking fun at and questioning the status quo. This section discusses how these performances use satire as a tool for social commentary, challenging audiences to reconsider preconceptions and societal norms while enveloping them in the universal language of laughter.
+        </p>
+    </div>
+    <div class="separator-bar" style="height: 3px; background-color: darkgray; margin: 15px 0;"></div>
+
+    <h2 class="title" style="font-size: 30px; font-weight: 530;">Featured Comedy Show:</h2>
+    <p class="show-text" style="font-size: 23px;color: black; text-align: left;">
+        We invite you to delve deeper into the details of each show featured in this tutorial. Click "View Details" to get a taste of this comedy's charm and the craft behind its laughter.
+    </p>
+    <!-- 'Shucked' Show -->
+    <div class="row" style="margin-top: 15px;">
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="https://m.media-amazon.com/images/M/MV5BOGQ1YmM5OWUtY2VmOS00NWU2LWE3NzQtNjY5ZDQ3OTZiYzQyXkEyXkFqcGdeQXVyNzkyMDA5MTc@._V1_FMjpg_UX1000_.jpg" class="card-img-bot" alt="heathers">
+                    <div class="card-body">
+                        <h5 class="card-title title">Heathers</h5>
+                        <p class="card-text" >Delight in the dark comedy of 'Heathers', where high school drama meets hilarious and cunning twists.</p>
+                        <a href="/discover_your_show/musicals/hamilton" class="btn" style="color: yellow; background-color: rgb(67, 68, 66); font-size: 18px;">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR17n6EIQV-lrsXrRjSe0Rb8hzvXdx1ZNdI1xWinZqXhMrRgcIL5o1mHAAUa2WvMQZ4q-A&usqp=CAU" class="card-img-bot" alt="shucked">
+                    <div class="card-body">
+                        <h5 class="card-title">Shucked</h5>
+                        <p class="card-text" >Step into a hysterical ride through 'Shucked', a rib-tickling tale that unfolds in a farmland frenzy.</p>
+                        <a href="/discover_your_show/musicals/hamilton" class="btn" style="color: yellow; background-color: rgb(67, 68, 66); font-size: 18px;">View Details</a>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="https://www.broadway.org/logos/shows/bom2022keyart.jpg" class="card-img-bot" alt="mormon">
+                    <div class="card-body">
+                        <h5 class="card-title title">Book of Mormon</h5>
+                        <p class="card-text" >Prepare for an uproarious adventure with 'Book of Mormon', a satirical spectacle that has captivated audiences with its bold humor.</p>
+                        <a href="/discover_your_show/musicals/hamilton" class="btn" style="color: yellow; background-color: rgb(67, 68, 66); font-size: 18px;">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+    var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+              panel.style.marginTop = "1px";
+              panel.style.marginBottom = "1px";
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+              panel.style.marginTop = "20px";
+              panel.style.marginBottom = "20px";
+            } 
+          });
+        }
+</script>
+    
+{% endblock %}

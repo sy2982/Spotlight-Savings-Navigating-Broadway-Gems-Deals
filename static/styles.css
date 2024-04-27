@@ -204,6 +204,10 @@ body {
     font-family: "Playfair Display", serif;
     font-size: 30px;
 }
+.card-text {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+}
 .card {
     background-color: #fff;
     border-radius: 15px;
@@ -229,4 +233,48 @@ body {
 }
 .section-title {
     margin-top: 2rem;
+}
+
+.carousel-item {
+    height: 55vh; /* Adjust height as needed */
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+}
+.title-sub {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    text-align: center;
+}
+.show-text {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+.button-home {
+    padding: 10px 20px;
+    font-size: 25px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: rgb(67, 68, 66); /* Broadway color */
+    margin-bottom: 20px; /* Spacing between buttons */
+    background-color: yellow; /* Blue color */
+    font-family: "Playfair Display", serif;
+}
+/* Hover effect */
+.button-home:hover {
+    background-color: orange; /* Darker blue on hover */
 }

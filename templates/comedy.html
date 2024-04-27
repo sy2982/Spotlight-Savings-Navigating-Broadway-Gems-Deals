@@ -5,21 +5,47 @@ Comedy
 {% endblock %}
 
 {% block content %}
+<style>
+    body {
+        background-color: rgb(242, 246, 238);
+    }
+    .card {
+        transition: transform .2s; /* Animation */
+        border-radius: 10px;
+    }
+    .card:hover {
+        transform: scale(1.05); /* Scale effect on hover */
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Shadow for depth */
+    }
+    .btn:hover {
+        background-color: #434442; /* Button color change on hover */
+        color: white;
+    } 
+</style>
 <div class="container">
-    <h1 class="title">Drama:</h1>
-    <p>A World Full of Laughter and Wit.</p>
-    <p>Embark on a journey through hilarity and satire.     </p>
-    <a href="/introduction-details" class="btn btn-primary">Introduction & Details</a>
-    <p> </p>
-    <h2 class="title">Find the comedy that tickles your fancy and leaves you roaring with laughter!    </h2>
+    <h1 class="title" style="text-align: center;">Comedy Shows:</h1>
+    <div class="separator-bar" style="height: 3px; background-color: darkgray; margin: 15px 0;"></div>
+    <p class="show-text" style="font-size: 25px;">Enter the world of Broadway comedies - a realm of laughter, wit, and satire.</p>
+
+    <div class="info" style="display: flex; flex-direction: column; align-items: center;">
+        <p class="show-text" style="font-size: 22px;color: black; text-align: center;">This page celebrates the lighter side of Broadway. With our "Introduction & Details," laugh along with the stories that have tickled audiences for decades.</p>
+        <a href="/discover_your_show/comedy/intro" class="btn" style="color: yellow; background-color: rgb(67, 68, 66); font-size: 20px;">Introduction & Details</a>
+    </div>
+    <div class="separator-bar" style="height: 3px; background-color: lightgray; margin: 15px 0;"></div>
+    
+    <h2 class="title" style="font-size: 30px; font-weight: 530;">Iconic Comedy Shows to Explore:</h2>
+    <p class="show-text" style="font-size: 23px;color: black; text-align: left;">
+        Click "View Details" for a backstage pass into the history and highlights of Broadway's funniest shows.
+    </p>
     <div class="row">
         <div class="col-md-4 mb-3">
             <div class="card">
                 <img src="https://m.media-amazon.com/images/M/MV5BOGQ1YmM5OWUtY2VmOS00NWU2LWE3NzQtNjY5ZDQ3OTZiYzQyXkEyXkFqcGdeQXVyNzkyMDA5MTc@._V1_FMjpg_UX1000_.jpg" class="card-img-bot" alt="heathers">
                     <div class="card-body">
                         <h5 class="card-title title">Heathers</h5>
-                        <a href="/discover_your_show/musicals" class="btn btn-primary">View Details</a>
-                    </div>
+                        <p class="card-text" style="color: gray;">Delight in the dark comedy of 'Heathers', where high school drama meets hilarious and cunning twists.</p>
+                        <a href="/discover_your_show/musicals/hamilton" class="btn" style="color: yellow; background-color: rgb(67, 68, 66); font-size: 18px;">View Details</a>
+                </div>
             </div>
         </div>
         <div class="col-md-4 mb-3">
@@ -27,7 +53,8 @@ Comedy
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR17n6EIQV-lrsXrRjSe0Rb8hzvXdx1ZNdI1xWinZqXhMrRgcIL5o1mHAAUa2WvMQZ4q-A&usqp=CAU" class="card-img-bot" alt="shucked">
                     <div class="card-body">
                         <h5 class="card-title">Shucked</h5>
-                        <a href="/discover_your_show/musicals" class="btn btn-primary">View Details</a>
+                        <p class="card-text" style="color: gray;">Step into a hysterical ride through 'Shucked', a rib-tickling tale that unfolds in a farmland frenzy.</p>
+                        <a href="/discover_your_show/musicals/hamilton" class="btn" style="color: yellow; background-color: rgb(67, 68, 66); font-size: 18px;">View Details</a>
                     </div>
             </div>
         </div>
@@ -36,8 +63,9 @@ Comedy
                 <img src="https://www.broadway.org/logos/shows/bom2022keyart.jpg" class="card-img-bot" alt="mormon">
                     <div class="card-body">
                         <h5 class="card-title title">Book of Mormon</h5>
-                        <a href="/discover_your_show/musicals" class="btn btn-primary">View Details</a>
-                    </div>
+                        <p class="card-text" style="color: gray;">Prepare for an uproarious adventure with 'Book of Mormon', a satirical spectacle that has captivated audiences with its bold humor.</p>
+                        <a href="/discover_your_show/musicals/hamilton" class="btn" style="color: yellow; background-color: rgb(67, 68, 66); font-size: 18px;">View Details</a>
+                </div>
             </div>
         </div>
         
