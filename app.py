@@ -61,10 +61,6 @@ def explore_drama():
 def explore_revival():
     return render_template('revival.html')
 
-@app.route('/discover_your_show/comedy')
-def explore_comedy():
-    return render_template('comedy.html')
-
 @app.route('/discover_your_show/musicals')
 def explore_musicals():
     return render_template('musicals.html')
@@ -77,9 +73,33 @@ def explore_musical_intro():
 def explore_hamilton():
     return render_template('hamilton.html')
 
+@app.route('/discover_your_show/musicals/wicked')
+def explore_wicked():
+    return render_template('wicked.html')
+
+@app.route('/discover_your_show/musicals/hadestown')
+def explore_hadestown():
+    return render_template('hadestown.html')
+
+@app.route('/discover_your_show/comedy')
+def explore_comedy():
+    return render_template('comedy.html')
+
 @app.route('/discover_your_show/comedy/intro')
 def explore_comedy_intro():
     return render_template('comedy_intro.html')
+
+@app.route('/discover_your_show/comedy/heathers')
+def explore_heathers():
+    return render_template('heathers.html')
+
+@app.route('/discover_your_show/comedy/shucked')
+def explore_shucked():
+    return render_template('shucked.html')
+
+@app.route('/discover_your_show/comedy/book')
+def explore_book():
+    return render_template('book.html')
 
 @app.route('/discover_your_show/drama/intro')
 def explore_drama_intro():

@@ -1,0 +1,89 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Heathers
+{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: rgb(242, 246, 238);
+    }
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+    }
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .btn {
+        background-color: yellow;
+        color: black;
+        padding: 10px 10px;
+        border: none;
+        text-decoration: none;
+        font-size: 15px;
+        display: inline-block;
+    }
+    .btn:hover {
+        background-color: #ffd700;
+        color: white;
+    }
+    .separator-bar {
+        height: 3px;
+        background-color: darkgray;
+        margin: 15px 0;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="title" style="text-align: center;">Heathers: High School, Hierarchy, and Homicide</h1>
+            <div class="separator-bar"></div>
+
+            <p class="show-text" style="font-size: 23px;">
+                "Heathers" is a dark comedy rock musical based on the 1989 cult film of the same name. With music, lyrics, and a book by Laurence O'Keefe and Kevin Murphy, it satirizes the complexities of high school life and teenage angst, set against the backdrop of 1980s America.
+            </p>
+            <p class="show-text" style="font-size: 21px; text-align: left;">
+                <strong style="font-size: 22px;">What You'll Discover:</strong><br>
+                - <strong>Story:</strong> The tumultuous and treacherous world of Westerberg High, where Veronica Sawyer navigates the social hierarchy and the notorious Heathers.<br>
+                - <strong>Music and Lyrics:</strong> Engaging songs that blend dark humor with electrifying rock influences.<br>
+                - <strong>Impact:</strong> Explore how "Heathers" challenges social norms and portrays the darker side of teenage life.
+            </p>
+        </div>
+        
+        <div class="col-md-8">
+            <div class="video-container" style="position: relative; padding-bottom: 70%; height: 0; overflow: hidden;">
+                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/rUco8XjgTvg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="col-md-4 buttons-container">
+            <p class="info" style="background-color: lightgray; padding: 20px;">
+                <strong class="show-text" style="font-size: 23px;">Instructions for Exploration:</strong><br>
+                1. Watch the Trailer: Get a taste of the musical's edgy and energetic vibe.<br>
+                2. Official Website: Dive deeper into the plot and characters.<br>
+                3. Cast & Creative: Discover the team behind the curtain.<br>
+                4. Reviews: See what critics and fans have to say about its bold approach.<br>
+                5. Tickets: Find opportunities to experience this daring show live.
+            </p>
+            <a href="https://heathersthemusical.com" class="btn">Heathers Official Website</a>
+            <a href="https://heathersthemusical.com/cast" class="btn">Cast & Creative</a>
+            <a href="https://www.nytimes.com/2014/03/04/theater/in-heathers-the-musical-high-school-is-still-murder.html" class="btn">Heathers Reviews</a>
+            <a href="https://heathersthemusical.com/tickets" class="btn">Heathers Tickets</a>
+        </div>
+    </div>
+    <div class="navigation-btns">
+        <a href="/discover_your_show/comedy" class="btn" style="margin-bottom: 15px; background-color: rgb(67, 68, 66); color: yellow;">Back to Discover Comedy</a>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}

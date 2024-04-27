@@ -1,0 +1,89 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+The Book of Mormon
+{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: rgb(242, 246, 238);
+    }
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+    }
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .btn {
+        background-color: yellow;
+        color: black;
+        padding: 10px 10px;
+        border: none;
+        text-decoration: none;
+        font-size: 15px;
+        display: inline-block;
+    }
+    .btn:hover {
+        background-color: #ffd700;
+        color: white;
+    }
+    .separator-bar {
+        height: 3px;
+        background-color: darkgray;
+        margin: 15px 0;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="title" style="text-align: center;">The Book of Mormon: Another Testament of Musical Comedy</h1>
+            <div class="separator-bar"></div>
+
+            <p class="show-text" style="font-size: 23px;">
+                "The Book of Mormon" is a satirical musical that captures the misadventures of two Mormon missionaries sent to a remote village in Uganda. With a book, lyrics, and music by Trey Parker, Robert Lopez, and Matt Stone, known for their work on "South Park," the show challenges cultural and religious narratives through humor and song.
+            </p>
+            <p class="show-text" style="font-size: 21px; text-align: left;">
+                <strong style="font-size: 22px;">What You'll Discover:</strong><br>
+                - <strong>Story:</strong> A humorous exploration of faith and tradition.<br>
+                - <strong>Music and Lyrics:</strong> Catchy tunes and irreverent lyrics that challenge societal norms.<br>
+                - <strong>Impact:</strong> How "The Book of Mormon" has become a cultural phenomenon, pushing the boundaries of traditional musical theatre.
+            </p>
+        </div>
+        
+        <div class="col-md-8">
+            <div class="video-container" style="position: relative; padding-bottom: 70%; height: 0; overflow: hidden;">
+                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/k4-eWO1xu3I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="col-md-4 buttons-container">
+            <p class="info" style="background-color: lightgray; padding: 20px;">
+                <strong class="show-text" style="font-size: 23px;">Instructions for Exploration:</strong><br>
+                1. Watch the Trailer: Experience the comedic essence of the show.<br>
+                2. Official Website: Delve deeper into the story and its characters.<br>
+                3. Cast & Creative: Learn about the creators and performers who bring the show to life.<br>
+                4. Reviews: Read what both critics and audiences have to say about its impact.<br>
+                5. Tickets: Find out how you can enjoy this hilarious musical firsthand.
+            </p>
+            <a href="https://bookofmormonbroadway.com" class="btn">Book of Mormon Official Website</a>
+            <a href="https://bookofmormonbroadway.com/cast" class="btn">Cast & Creative</a>
+            <a href="https://www.nytimes.com/2011/03/25/theater/reviews/the-book-of-mormon-at-eugene-oneill-theater-review.html" class="btn">Book of Mormon Reviews</a>
+            <a href="https://bookofmormonbroadway.com/tickets" class="btn">Book of Mormon Tickets</a>
+        </div>
+    </div>
+    <div class="navigation-btns">
+        <a href="/discover_your_show/comedy" class="btn" style="margin-bottom: 15px; background-color: rgb(67, 68, 66); color: yellow;">Back to Discover Comedy</a>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}

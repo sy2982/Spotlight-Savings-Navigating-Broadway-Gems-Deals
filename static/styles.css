@@ -218,6 +218,7 @@ body {
     margin-bottom: 15px;
     padding: 10px;
     border-radius: 10px;
+    font-family: "Playfair Display", serif;
 }
 .genre-description, .key-components, .learning-through-broadway {
     margin-bottom: 2rem;

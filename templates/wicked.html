@@ -1,0 +1,59 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Wicked
+{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: rgb(242, 246, 238);
+    }
+    
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="title" style="text-align: center;">Wicked: The Untold Story of the Witches of Oz</h1>
+            <div class="separator-bar" style="height: 3px; background-color: darkgray; margin: 15px 0;"></div>
+
+            <p class="show-text" style="font-size: 23px;">
+                "Wicked" takes a fresh look at the Land of Oz, telling the story from the perspective of the witches. With music and lyrics by Stephen Schwartz and book by Winnie Holzman, this musical offers a parallel narrative to "The Wizard of Oz." The show explores themes of friendship, justice, and the nature of evil.
+            </p>
+            <p class="show-text" style="font-size: 21px; text-align: left;">
+                <strong style="font-size: 22px;">What You'll Discover:</strong><br>
+                - <strong>Story:</strong> The background story of Elphaba, the misunderstood, so-called Wicked Witch of the West.<br>
+                - <strong>Music and Lyrics:</strong> Experience the captivating score including hits like "Defying Gravity."<br>
+                - <strong>Impact:</strong> Learn how "Wicked" has captivated audiences around the world and its impact on modern musical theatre.
+            </p>
+        </div>
+        
+        <div class="col-md-8">
+            <div class="video-container" style="position: relative; padding-bottom: 70%; height: 0; overflow: hidden;">
+                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/Svt0UytcAgc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="col-md-4 buttons-container">
+            <p class="info" style="background-color: lightgray; padding: 20px;">
+                <strong class="show-text" style="font-size: 23px;">Instructions for Exploration:</strong><br>
+                1. Watch the Trailer: Explore the magic and music of "Wicked."<br>
+                2. Official Website: Visit "Wicked's" official website for more details.<br>
+                3. Cast & Creative: Meet the team behind the show.<br>
+                4. Reviews: Discover what critics and audiences think.<br>
+                5. Tickets: See where you can experience the magic live.
+            </p>
+            <a href="https://www.wickedthemusical.com" class="btn" style="background-color: yellow; color: black;">Wicked Official Website</a>
+            <a href="https://www.wickedthemusical.com/the-company" class="btn" style="background-color: yellow; color: black;">Cast & Creative</a>
+            <a href="https://www.nytimes.com/2003/10/31/movies/theater-review-the-good-the-bad-and-the-green.html" class="btn" style="background-color: yellow; color: black;">Wicked Reviews</a>
+            <a href="https://www.wickedthemusical.com/tickets" class="btn" style="background-color: yellow; color: black;">Wicked Tickets</a>
+        </div>
+    </div>
+    <div class="navigation-btns">
+        <a href="/discover_your_show" class="btn" style="margin-bottom: 15px; background-color: rgb(67, 68, 66); color: yellow;">Back to Discover More Genres</a>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}

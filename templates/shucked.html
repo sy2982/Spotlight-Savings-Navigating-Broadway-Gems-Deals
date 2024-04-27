@@ -1,0 +1,89 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Shucked
+{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: rgb(242, 246, 238);
+    }
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+    }
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .btn {
+        background-color: yellow;
+        color: black;
+        padding: 10px 10px;
+        border: none;
+        text-decoration: none;
+        font-size: 15px;
+        display: inline-block;
+    }
+    .btn:hover {
+        background-color: #ffd700;
+        color: white;
+    }
+    .separator-bar {
+        height: 3px;
+        background-color: darkgray;
+        margin: 15px 0;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="title" style="text-align: center;">Shucked: A New Musical Comedy</h1>
+            <div class="separator-bar"></div>
+
+            <p class="show-text" style="font-size: 23px;">
+                "Shucked" is a delightful musical comedy set in the heart of America's farmland. With catchy tunes and heartwarming humor, it brings to life the story of a small town facing big changes, all centered around the annual corn harvest.
+            </p>
+            <p class="show-text" style="font-size: 21px; text-align: left;">
+                <strong style="font-size: 22px;">What You'll Discover:</strong><br>
+                - <strong>Story:</strong> Follow the quirky and charming characters as they navigate through love, friendship, and corn.<br>
+                - <strong>Music and Lyrics:</strong> Enjoy a soundtrack filled with bluegrass and modern Americana that will keep your toes tapping.<br>
+                - <strong>Impact:</strong> Discover how "Shucked" captures the essence of rural Americana with humor and warmth.
+            </p>
+        </div>
+        
+        <div class="col-md-8">
+            <div class="video-container" style="position: relative; padding-bottom: 70%; height: 0; overflow: hidden;">
+                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/YOG9AyQIVJc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="col-md-4 buttons-container">
+            <p class="info" style="background-color: lightgray; padding: 20px;">
+                <strong class="show-text" style="font-size: 23px;">Instructions for Exploration:</strong><br>
+                1. Watch the Trailer: Get a feel for the comedic and musical flavor of "Shucked."<br>
+                2. Official Website: Visit "Shucked's" official website for more details and behind-the-scenes content.<br>
+                3. Cast & Creative: Meet the creative minds and talented performers who bring the show to life.<br>
+                4. Reviews: See what the audience and critics are saying about its unique charm.<br>
+                5. Tickets: Find out where and how you can experience this musical live.
+            </p>
+            <a href="https://shuckedthemusical.com" class="btn">Shucked Official Website</a>
+            <a href="https://shuckedthemusical.com/cast" class="btn">Cast & Creative</a>
+            <a href="https://www.nytimes.com/2023/03/25/theater/review-shucked.html" class="btn">Shucked Reviews</a>
+            <a href="https://shuckedthemusical.com/tickets" class="btn">Shucked Tickets</a>
+        </div>
+    </div>
+    <div class="navigation-btns">
+        <a href="/discover_your_show/comedy" class="btn" style="margin-bottom: 15px; background-color: rgb(67, 68, 66); color: yellow;">Back to Discover Comedy</a>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}
