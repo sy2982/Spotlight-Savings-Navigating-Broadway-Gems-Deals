@@ -1,0 +1,119 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Revival Shows on Broadway
+{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: rgb(242, 246, 238);
+    }
+    .card:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    .btn {
+        background-color: yellow; 
+        color: black; /* Adjusted the color for visibility */
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+        background-color: #ffcc00; /* Slightly darker yellow on hover */
+    }
+</style>
+<div class="container">
+    <h1 class="title">Revival Shows:</h1>
+    <div class="separator-bar" style="height: 3px; background-color: darkgray; margin: 15px 0;"></div>
+    <p class="show-text" style="font-size: 23px; text-align: left;">
+        Broadway revivals breathe new life into classic shows, offering contemporary audiences a chance to experience legendary performances with a fresh perspective. These productions honor their original spirit while reflecting modern sensibilities and advancements in stage technology.
+    </p>
+    <button class="accordion" style="font-size: 26px;">Why Revive a Show?</button>
+    <div class="show-panel">
+        <p style="font-size: 20px;">
+            Reviving a show provides an opportunity to reintroduce its timeless themes to a new generation. It allows for new interpretations that can highlight different aspects of the narrative or themes under current social contexts, often leading to renewed relevance and deeper connections with today's audiences.
+        </p>
+    </div>
+    <button class="accordion" style="font-size: 26px;">Challenges and Triumphs</button>
+    <div class="show-panel">
+        <p style="font-size: 20px;">
+            The challenge of reviving a Broadway show lies in balancing respect for the original while making it appealing and relevant for contemporary audiences. Successes in this endeavor often lead to a renewed appreciation of the theatrical arts and can even surpass the acclaim of the original productions. Successful revivals often see innovations in direction, performance, and design, bringing a new dimension to the staging and interpretation of the narrative.
+        </p>
+    </div>
+    <button class="accordion" style="font-size: 26px;">The Impact of Revivals on Modern Theater</button>
+    <div class="show-panel">
+        <p style="font-size: 20px;">
+            Revivals play a crucial role in preserving and perpetuating the cultural heritage of theater. They often act as a bridge between the past and present, influencing contemporary theater-making practices and providing a vital link in the evolution of theatrical forms and techniques. Revivals can rejuvenate interest in lesser-known works or reinterpret classics through a modern lens, often leading to a broader and more diverse theater audience.
+        </p>
+    </div>
+    <div class="separator-bar" style="height: 3px; background-color: darkgray; margin: 15px 0;"></div>
+
+    <h2 class="title" style="font-size: 30px; font-weight: 530;">Explore Iconic Revivals:</h2>
+    <p class="show-text" style="font-size: 23px;color: black; text-align: left;">
+        Delve into the details of each revival and discover the creative vision behind these beloved classics.
+    </p>
+    <button class="accordion" style="font-size: 26px;">Iconic Revivals</button>
+    <div class="show-panel">
+        <p style="font-size: 20px;">
+            Shows like "The Wiz," "My Fair Lady," and "Cabaret" have enjoyed successful revivals that not only pay homage to their originals but also bring something new and extraordinary to the stage, often achieving critical and commercial success anew.
+        </p>
+    </div>
+    <div class="row" style="margin-top: 15px;">
+        <!-- Sample card for "The Wiz" -->
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="https://broadwaydirect.com/wp-content/uploads/2023/10/WIZ-1200x675-1.jpg" class="card-img-bot" alt="The Wiz">
+                <div class="card-body">
+                    <h5 class="card-title title">The Wiz</h5>
+                    <p class="card-text">This revival adds modern flair to the classic tale of Dorothy's adventure, with vibrant costumes and a dynamic new score.</p>
+                    <a href="/discover_your_show/revivals/the_wiz" class="btn" style="color: yellow; background-color: rgb(67, 68, 66); font-size: 18px;">View Details</a>
+                </div>
+            </div>
+        </div>
+        <!-- More cards for other shows like "My Fair Lady" and "Cabaret" -->
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="https://www.portland5.com/sites/default/files/styles/event_square_large/public/events/2022/11/07/PORT_MFL_Tour_438x400.jpg?itok=diyAXSdZ" class="card-img-bot" alt="My Fair Lady">
+                    <div class="card-body">
+                        <h5 class="card-title title">My Fair Lady</h5>
+                        <p class="card-text">Experience the transformation of Eliza Doolittle in this exquisite production that combines timeless music with a modern sensibility.</p>
+                        <a href="/discover_your_show/revivals/my_fair_lady" class="btn" style="color: yellow; background-color: rgb(67, 68, 66); font-size: 18px;">View Details</a>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="https://assets.playbill.com/playbill-covers/CAB_KeyArt_649x1024.jpg" class="card-img-bot" alt="Cabaret">
+                    <div class="card-body">
+                        <h5 class="card-title title">Cabaret</h5>
+                        <p class="card-text">Dive back into the Kit Kat Club with this darkly enticing revival of Cabaret, a show that explores the edges of society and morality.</p>
+                        <a href="/discover_your_show/revivals/cabaret" class="btn" style="color: yellow; background-color: rgb(67, 68, 66); font-size: 18px;">View Details</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+              panel.style.marginTop = "1px";
+              panel.style.marginBottom = "1px";
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+              panel.style.marginTop = "20px";
+              panel.style.marginBottom = "20px";
+            } 
+        });
+    }
+</script>
+    
+{% endblock %}

@@ -1,46 +1,83 @@
 {% extends 'layout.html' %}
 
 {% block title %}
-Drama
+Drama Shows on Broadway
 {% endblock %}
 
 {% block content %}
+<style>
+    body {
+        background-color: rgb(242, 246, 238);
+    }
+    .card {
+        transition: transform .2s; /* Animation */
+        border-radius: 10px;
+    }
+    .card:hover {
+        transform: scale(1.05); /* Scale effect on hover */
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Shadow for depth */
+    }
+    .btn {
+        background-color: rgb(67, 68, 66); 
+        color: yellow;
+        font-size: 18px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+    }
+    
+    .btn:hover {
+        background-color: orange; /* Button color change on hover */
+        color: white;
+    }
+</style>
 <div class="container">
-    <h1 class="title">Drama:</h1>
-    <p>A Stage Where Every Word Resonates.</p>
-    <p>Step into the realm of compelling narratives and powerful dialogues.     </p>
-    <a href="/introduction-details" class="btn btn-primary">Introduction & Details</a>
-    <p> </p>
-    <h2 class="title">Uncover the play that speaks to your soul!    </h2>
+    <h1 class="title" style="text-align: center;">Drama</h1>
+    <div class="separator-bar" style="height: 3px; background-color: darkgray; margin: 15px 0;"></div>
+    <p class="show-text" style="font-size: 25px;">Step into the realm of Broadway dramas </br>- where compelling narratives and powerful dialogues resonate deeply with audiences.</p>
+
+    <div class="info" style="display: flex; flex-direction: column; align-items: center;">
+        <p class="show-text" style="font-size: 22px; color: black; text-align: center;">This page is your gateway to the world of drama, offering a deep dive into stories that challenge, entertain, and transform. Explore our "Introduction & Details" to uncover the emotional and intellectual depth of dramatic storytelling.</p>
+        <a href="/discover_your_show/drama/intro" class="btn" style="align-self: center;font-size: 20px;">Introduction & Details</a>
+    </div>
+    <div class="separator-bar" style="height: 3px; background-color: lightgray; margin: 15px 0;"></div>
+    
+    <h2 class="title" style="font-size: 30px; font-weight: 530;">Iconic Dramas you may want to explore:</h2>
+    <p class="show-text" style="font-size: 23px; color: black; text-align: left;">
+        Discover the productions that have shaped the landscape of dramatic theatre. Each "View Details" button below offers an invitation to delve into the unique stories, critical acclaim, and powerful performances of these landmark shows.
+    </p>
     <div class="row">
         <div class="col-md-4 mb-3">
             <div class="card">
-                <img src="https://www.broadway.org/logos/shows/deathofasalesman-2022.jpeg" class="card-img-bot" alt="death">
-                    <div class="card-body">
-                        <h5 class="card-title title">Death of a Salesman</h5>
-                        <a href="/discover_your_show/musicals" class="btn btn-primary">View Details</a>
-                    </div>
+                <img src="https://www.broadway.org/logos/shows/deathofasalesman-2022.jpeg" class="card-img-bot" alt="Death of a Salesman">
+                <div class="card-body">
+                    <h5 class="card-title title">Death of a Salesman</h5>
+                    <p class="card-text" style="color: gray;">Explore this timeless narrative that delves into the American Dream and its discontents through the story of Willy Loman.</p>
+                    <a href="/discover_your_show/dramas/death_of_a_salesman" class="btn" style="color: yellow; background-color: rgb(67, 68, 66); font-size: 18px;">View Details</a>
+                </div>
             </div>
         </div>
         <div class="col-md-4 mb-3">
             <div class="card">
-                <img src="https://www.broadway.org/logos/shows/enemyoftheppl-2024update.png" class="card-img-bot" alt="enemy">
-                    <div class="card-body">
-                        <h5 class="card-title title">An Enemy of the People</h5>
-                        <a href="/discover_your_show/musicals" class="btn btn-primary">View Details</a>
-                    </div>
+                <img src="https://www.broadway.org/logos/shows/enemyoftheppl-2024update.png" class="card-img-bot" alt="An Enemy of the People">
+                <div class="card-body">
+                    <h5 class="card-title title">An Enemy of the People</h5>
+                    <p class="card-text" style="color: gray;">A gripping story of public welfare against private interests, and the explosive impact when the truth is revealed.</p>
+                    <a href="/discover_your_show/dramas/an_enemy_of_the_people" class="btn" style="color: yellow; background-color: rgb(67, 68, 66); font-size: 18px;">View Details</a>
+                </div>
             </div>
         </div>
         <div class="col-md-4 mb-3">
             <div class="card">
-                <img src="https://visitortixstorage.blob.core.windows.net/files/images/products/original_broadway-doubtrtc20231107155323" class="card-img-bot" alt="doubt">
-                    <div class="card-body">
-                        <h5 class="card-title title">Doubt</h5>
-                        <a href="/discover_your_show/musicals" class="btn btn-primary">View Details</a>
-                    </div>
+                <img src="https://visitortixstorage.blob.core.windows.net/files/images/products/original_broadway-doubtrtc20231107155323" class="card-img-bot" alt="Doubt">
+                <div class="card-body">
+                    <h5 class="card-title title">Doubt</h5>
+                    <p class="card-text" style="color: gray;">Witness the compelling drama that unfolds in a Bronx Catholic school, a powerful exploration of morality and uncertainty.</p>
+                    <a href="/discover_your_show/dramas/doubt" class="btn" style="color: yellow; background-color: rgb(67, 68, 66); font-size: 18px;">View Details</a>
+                </div>
             </div>
         </div>
-        
-        </div>
+    </div>
 </div>
+
 {% endblock %}

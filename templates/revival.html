@@ -1,46 +1,83 @@
 {% extends 'layout.html' %}
 
 {% block title %}
-Comedy
+Revival Shows on Broadway
 {% endblock %}
 
 {% block content %}
+<style>
+    body {
+        background-color: rgb(242, 246, 238);
+    }
+    .card {
+        transition: transform .2s; /* Animation */
+        border-radius: 10px;
+    }
+    .card:hover {
+        transform: scale(1.05); /* Scale effect on hover */
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Shadow for depth */
+    }
+    .btn {
+        background-color: rgb(67, 68, 66); 
+        color: yellow; /* Adjusted the color for better visibility */
+        font-size: 18px; /* Consistent font size across buttons */
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+    }
+    .btn:hover {
+        background-color: orange; /* Button color change on hover */
+        color: white;
+    }
+</style>
 <div class="container">
-    <h1 class="title">Revival:</h1>
-    <p>Classics Reimagined.</p>
-    <p>Rediscover the magic of timeless shows brought back to life with a fresh twist.</p>
-    <a href="/introduction-details" class="btn btn-primary">Introduction & Details</a>
-    <p> </p>
-    <h2>Which revival will capture your imagination next?    </h2>
+    <h1 class="title" style="text-align: center;">Revival Shows</h1>
+    <div class="separator-bar" style="height: 3px; background-color: darkgray; margin: 15px 0;"></div>
+    <p class="show-text" style="font-size: 25px;">Rediscover the magic of timeless Broadway shows brought back to life with a fresh twist.</p>
+
+    <div class="info" style="display: flex; flex-direction: column; align-items: center;">
+        <p class="show-text" style="font-size: 22px;color: black; text-align: center;">This page is dedicated to Broadway revivals, offering a second chance to experience classic shows with new interpretations and innovative stagings that resonate with today's audiences.</p>
+        <a href="/discover_your_show/revival/intro" class="btn" style="align-self: center;font-size: 20px;">Introduction & Details</a>
+    </div>
+    <div class="separator-bar" style="height: 3px; background-color: lightgray; margin: 15px 0;"></div>
+
+    <h2 class="title" style="font-size: 30px; font-weight: 530;">Iconic Revivals to Explore:</h2>
+    <p class="show-text" style="font-size: 23px;color: black; text-align: left;">
+        Explore the depth and artistry of shows that have stood the test of time, each revival offering a unique perspective on well-loved stories.
+    </p>
     <div class="row">
         <div class="col-md-4 mb-3">
             <div class="card">
-                <img src="https://broadwaydirect.com/wp-content/uploads/2023/10/WIZ-1200x675-1.jpg" class="card-img-bot" alt="wiz">
+                <img src="https://broadwaydirect.com/wp-content/uploads/2023/10/WIZ-1200x675-1.jpg" class="card-img-bot" alt="The Wiz">
                     <div class="card-body">
                         <h5 class="card-title title">The Wiz</h5>
-                        <a href="/discover_your_show/musicals" class="btn btn-primary">View Details</a>
+                        <p class="card-text" style="color: gray;">A soulful retelling of the classic Wizard of Oz, this revival brings vibrant characters and dazzling effects to the stage.</p>
+                        <a href="/discover_your_show/revivals/the_wiz" class="btn" style="color: yellow; background-color: rgb(67, 68, 66); font-size: 18px;">View Details</a>
                     </div>
             </div>
         </div>
         <div class="col-md-4 mb-3">
             <div class="card">
-                <img src="https://www.portland5.com/sites/default/files/styles/event_square_large/public/events/2022/11/07/PORT_MFL_Tour_438x400.jpg?itok=diyAXSdZ" class="card-img-bot" alt="fairlady">
+                <img src="https://www.portland5.com/sites/default/files/styles/event_square_large/public/events/2022/11/07/PORT_MFL_Tour_438x400.jpg?itok=diyAXSdZ" class="card-img-bot" alt="My Fair Lady">
                     <div class="card-body">
                         <h5 class="card-title title">My Fair Lady</h5>
-                        <a href="/discover_your_show/musicals" class="btn btn-primary">View Details</a>
+                        <p class="card-text" style="color: gray;">Experience the transformation of Eliza Doolittle in this exquisite production that combines timeless music with a modern sensibility.</p>
+                        <a href="/discover_your_show/revivals/my_fair_lady" class="btn" style="color: yellow; background-color: rgb(67, 68, 66); font-size: 18px;">View Details</a>
                     </div>
             </div>
         </div>
         <div class="col-md-4 mb-3">
             <div class="card">
-                <img src="https://assets.playbill.com/playbill-covers/CAB_KeyArt_649x1024.jpg" class="card-img-bot" alt="cabaret">
+                <img src="https://assets.playbill.com/playbill-covers/CAB_KeyArt_649x1024.jpg" class="card-img-bot" alt="Cabaret">
                     <div class="card-body">
                         <h5 class="card-title title">Cabaret</h5>
-                        <a href="/discover_your_show/musicals" class="btn btn-primary">View Details</a>
+                        <p class="card-text" style="color: gray;">Dive back into the Kit Kat Club with this darkly enticing revival of Cabaret, a show that explores the edges of society and morality.</p>
+                        <a href="/discover_your_show/revivals/cabaret" class="btn" style="color: yellow; background-color: rgb(67, 68, 66); font-size: 18px;">View Details</a>
                     </div>
             </div>
         </div>
         
         </div>
 </div>
+
 {% endblock %}

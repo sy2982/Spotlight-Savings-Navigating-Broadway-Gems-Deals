@@ -1,0 +1,122 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Drama Shows on Broadway
+{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: rgb(242, 246, 238);
+    }
+    .card:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    .btn {
+        background-color: yellow; 
+        color: black; /* Adjusted for visibility */
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+        background-color: #ffcc00; /* Slightly darker yellow on hover */
+    }
+</style>
+<div class="container">
+    <h1 class="title">Drama:</h1>
+    <div class="separator-bar" style="height: 3px; background-color: darkgray; margin: 15px 0;"></div>
+    <p class="show-text" style="font-size: 23px; text-align: left;">
+        Drama on Broadway conveys powerful narratives that explore the depths of human emotion and social issues. It's a genre where every word and silence resonates, offering audiences a mirror to their own lives and society.
+    </p>
+    <button class="accordion" style="font-size: 26px;">Defining Drama</button>
+    <div class="show-panel">
+        <p style="font-size: 20px;">
+            Drama on Broadway is distinguished by its focus on serious, often provocative themes and strong character development. It explores moral dilemmas, societal issues, and human frailties, often leaving the audience with lingering thoughts and emotions. The power of drama lies in its ability to make us reflect on our values, our decisions, and the consequences of human actions.
+        </p>
+    </div>
+    <button class="accordion" style="font-size: 26px;">Key Components of Drama</button>
+    <div class="show-panel">
+        <p style="font-size: 20px;">
+            <strong>Script:</strong> The backbone of any drama, providing structure and dialogue that bring the story to life.<br>
+            <strong>Characters:</strong> Usually complex and detailed, offering a psychological depth that invites viewers to delve into their personal journeys.<br>
+            <strong>Conflict:</strong> Drives the narrative, presenting challenges that enhance the dramatic tension.<br>
+            <strong>Setting:</strong> Often integral to the story, influencing the plot and the characters' actions and reactions.<br>
+            <strong>Themes:</strong> Central ideas or messages that are explored through the narrative, often reflecting universal human experiences.
+        </p>
+    </div>
+    <button class="accordion" style="font-size: 26px;">The Evolution of Modern Drama</button>
+    <div class="show-panel">
+        <p style="font-size: 20px;">
+            Modern drama on Broadway has seen a shift towards more nuanced and diverse storytelling, incorporating innovative staging and technology to enhance the narrative experience. Contemporary themes such as identity, diversity, and technology are increasingly prevalent, reflecting current societal debates and adding new layers of complexity to traditional dramatic structures.
+        </p>
+    </div>
+    <div class="separator-bar" style="height: 3px; background-color: darkgray; margin: 15px 0;"></div>
+
+    <h2 class="title" style="font-size: 30px; font-weight: 530;">Iconic Dramatic Shows to Explore:</h2>
+    <p class="show-text" style="font-size: 23px;color: black; text-align: left;">
+        Delve into the stories behind some of Broadway's most profound dramas. Click "View Details" to explore the artistic nuances and historical significance of each show.
+    </p>
+    <button class="accordion" style="font-size: 26px;">Why Iconic Dramas Matter</button>
+    <div class="show-panel">
+        <p style="font-size: 20px;">
+            Iconic dramas capture essential truths about the human condition, often pushing audiences to confront uncomfortable realities or question moral complexities. From classic tragedies to contemporary issues, these shows leave a lasting impact on both culture and individual consciousness.
+        </p>
+    </div>
+    <div class="row" style="margin-top: 15px;">
+        <!-- Example Dramatic Show -->
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="https://www.broadway.org/logos/shows/deathofasalesman-2022.jpeg" class="card-img-bot" alt="Death of a Salesman">
+                    <div class="card-body">
+                        <h5 class="card-title title">Death of a Salesman</h5>
+                        <p class="card-text">Explore the tragic journey of Willy Loman as he navigates the challenges of life and the pursuit of the American dream.</p>
+                        <a href="/discover_your_show/dramas/death_of_a_salesman" class="btn" style="color: yellow; background-color: rgb(67, 68, 66); font-size: 18px;">View Details</a>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="https://www.broadway.org/logos/shows/enemyoftheppl-2024update.png" class="card-img-bot" alt="An Enemy of the People">
+                <div class="card-body">
+                    <h5 class="card-title title">An Enemy of the People</h5>
+                    <p class="card-text">A gripping story of public welfare against private interests, and the explosive impact when the truth is revealed.</p>
+                    <a href="/discover_your_show/dramas/an_enemy_of_the_people" class="btn" style="color: yellow; background-color: rgb(67, 68, 66); font-size: 18px;">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="https://visitortixstorage.blob.core.windows.net/files/images/products/original_broadway-doubtrtc20231107155323" class="card-img-bot" alt="Doubt">
+                <div class="card-body">
+                    <h5 class="card-title title">Doubt</h5>
+                    <p class="card-text">Witness the compelling drama that unfolds in a Bronx Catholic school, a powerful exploration of morality and uncertainty.</p>
+                    <a href="/discover_your_show/dramas/doubt" class="btn" style="color: yellow; background-color: rgb(67, 68, 66); font-size: 18px;">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+                panel.style.marginTop = "1px";
+                panel.style.marginBottom = "1px";
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+                panel.style.marginTop = "20px";
+                panel.style.marginBottom = "20px";
+            } 
+        });
+    }
+</script>
+    
+{% endblock %}
