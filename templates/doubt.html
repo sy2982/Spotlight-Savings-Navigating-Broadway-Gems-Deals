@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Doubt: A Parable
+{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: rgb(242, 246, 238);
+    }
+    .btn:hover {
+        background-color: orange !important; /* Button color change on hover */
+        color: white !important;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="title" style="text-align: center;">Doubt: A Parable</h1>
+            <div class="separator-bar" style="height: 3px; background-color: darkgray; margin: 15px 0;"></div>
+
+            <p class="show-text" style="font-size: 21px;">
+                "Doubt: A Parable" is a gripping drama written by John Patrick Shanley. Set in a Catholic school in the Bronx in 1964, the play explores themes of uncertainty, faith, and moral ambiguity. The story follows Sister Aloysius, the strict and conservative principal, who becomes suspicious of Father Flynn's relationship with one of the students, leading to a tense confrontation.
+            </p>
+            <p class="show-text" style="font-size: 21px; text-align: left;">
+                <strong style="font-size: 22px;">What You'll Discover:</strong><br>
+                - <strong>Story:</strong> Experience the gripping tale of suspicion and moral uncertainty in a Catholic school.<br>
+                - <strong>Characters:</strong> Meet Sister Aloysius, Father Flynn, and other compelling characters grappling with doubt and conviction.<br>
+                - <strong>Themes:</strong> Delve into the complexities of faith, ethics, and the abuse of power.<br>
+                - <strong>Legacy:</strong> Learn about the play's critical acclaim and its adaptation into film and other media.
+            </p>
+        </div>
+        
+        <div class="col-md-8">
+            <div class="video-container" style="position: relative; padding-bottom: 70%; height: 0; overflow: hidden;">
+                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/9bovefsREDw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="col-md-4 buttons-container">
+            <!-- Replace `#` with your actual links -->
+            <p class="info" style="background-color: lightgray;">
+                <strong style="font-size: 23px;">Instructions for Exploration:</strong><br>
+                1. Watch the Trailer: Get a glimpse of the play's themes and performances.<br>
+                2. Cast & Crew: Learn about the talented actors and production team.<br>
+                3. Reviews: Read critiques and audience reactions.<br>
+                4. Tickets: Find out how you can experience this powerful drama live.
+            </p>
+            <a href="https://www.roundabouttheatre.org/get-tickets/2023-2024-season/doubt-a-parable/" class="btn" style="background-color: yellow; color: black;">Official Website</a>
+            <a href="https://www.broadway.com/shows/doubt/cast/" class="btn" style="background-color: yellow; color: black;">Cast & Crew</a>
+            <a href="https://www.theguardian.com/stage/2022/jan/28/doubt-a-parable-review-monica-dolan" class="btn" style="background-color: yellow; color: black;">Reviews</a>
+            <a href="https://www.roundabouttheatre.org/get-tickets/2023-2024-season/doubt-a-parable/" class="btn" style="background-color: yellow; color: black;">Tickets</a>
+        </div>
+    </div>
+    <div class="navigation-btns">
+        <a href="/discover_your_show/drama" class="btn" style="margin-bottom: 15px; background-color: rgb(67, 68, 66); color: yellow;">Back to Discover More Drama</a>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}

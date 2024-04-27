@@ -9,19 +9,28 @@ Comedy Shows on Broadway
     body {
         background-color: rgb(242, 246, 238);
     }
+    .card {
+        transition: transform .2s; /* Animation */
+        border-radius: 10px;
+    }
     .card:hover {
-        transform: scale(1.05);
-        transition: transform 0.3s ease-in-out;
-        cursor: pointer;
+        transform: scale(1.05); /* Scale effect on hover */
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Shadow for depth */
     }
     .btn {
-        background-color: yellow; 
-        color: black; /* Adjusted the color for visibility */
-        transition: background-color 0.3s ease;
+        background-color: rgb(67, 68, 66) !important; 
+        color: yellow !important;
+        font-size: 18px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
     }
+    
     .btn:hover {
-        background-color: #ffcc00; /* Slightly darker yellow on hover */
+        background-color: orange !important; /* Button color change on hover */
+        color: white !important;
     }
+
     .show-panel p{
         font-size: 20px;
     }

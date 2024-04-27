@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+An Enemy of the People
+{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: rgb(242, 246, 238);
+    }
+    .btn:hover {
+        background-color: orange !important; /* Button color change on hover */
+        color: white !important;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="title" style="text-align: center;">An Enemy of the People</h1>
+            <div class="separator-bar" style="height: 3px; background-color: darkgray; margin: 15px 0;"></div>
+
+            <p class="show-text" style="font-size: 21px;">
+                "An Enemy of the People" is a thought-provoking play written by Henrik Ibsen. It tackles themes of truth, integrity, and the consequences of challenging societal norms. The story revolves around Dr. Thomas Stockmann, who discovers contamination in the water supply of a small town and faces opposition from the community when he tries to expose the truth.
+            </p>
+            <p class="show-text" style="font-size: 21px; text-align: left;">
+                <strong style="font-size: 22px;">What You'll Discover:</strong><br>
+                - <strong>Story:</strong> Explore the tension between individual conscience and public duty in a small Norwegian town.<br>
+                - <strong>Characters:</strong> Meet Dr. Stockmann and the other inhabitants of the town, each with their own motivations and conflicts.<br>
+                - <strong>Themes:</strong> Delve into the complexities of truth, democracy, and the nature of power.<br>
+                - <strong>Legacy:</strong> Learn about the enduring relevance of Ibsen's masterpiece and its impact on political and social discourse.
+            </p>
+        </div>
+        
+        <div class="col-md-8">
+            <div class="video-container" style="position: relative; padding-bottom: 70%; height: 0; overflow: hidden;">
+                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/XEihhkR7qa8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="col-md-4 buttons-container">
+            <!-- Replace `#` with your actual links -->
+            <p class="info" style="background-color: lightgray;">
+                <strong style="font-size: 23px;">Instructions for Exploration:</strong><br>
+                1. Watch the Trailer: Get a glimpse of the play's themes and performances.<br>
+                2. Cast & Crew: Learn about the talented actors and production team.<br>
+                3. Reviews: Read critiques and audience reactions.<br>
+                4. Tickets: Find out how you can experience this powerful drama live.
+            </p>
+            <a href="https://anenemyofthepeopleplay.com/" class="btn" style="background-color: yellow; color: black;">Official Website</a>
+            <a href="https://www.broadway.com/shows/an-enemy-of-the-people/cast/" class="btn" style="background-color: yellow; color: black;">Cast & Crew</a>
+            <a href="https://www.theguardian.com/stage/2024/mar/18/an-enemy-of-the-people-review-jeremy-strong-henrik-ibsen-drama" class="btn" style="background-color: yellow; color: black;">Reviews</a>
+            <a href="https://www.broadway.com/shows/an-enemy-of-the-people/" class="btn" style="background-color: yellow; color: black;">Tickets</a>
+        </div>
+    </div>
+    <div class="navigation-btns">
+        <a href="/discover_your_show/drama" class="btn" style="margin-bottom: 15px; background-color: rgb(67, 68, 66); color: yellow;">Back to Discover More Drama</a>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}

@@ -113,5 +113,17 @@ def explore_revival_intro():
 def find_tickets():
     return render_template('/find_tickets.html')
 
+@app.route('/discover_your_show/dramas/death_of_a_salesman')
+def explore_death():
+    return render_template('death.html')
+
+@app.route('/discover_your_show/dramas/an_enemy_of_the_people')
+def explore_enemy():
+    return render_template('enemy.html')
+
+@app.route('/discover_your_show/dramas/doubt')
+def explore_doubt():
+    return render_template('doubt.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
