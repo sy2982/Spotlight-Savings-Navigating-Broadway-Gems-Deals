@@ -125,5 +125,17 @@ def explore_enemy():
 def explore_doubt():
     return render_template('doubt.html')
 
+@app.route('/discover_your_show/revivals/the_wiz')
+def explore_wiz():
+    return render_template('the_wiz.html')
+
+@app.route('/discover_your_show/revivals/my_fair_lady')
+def explore_lady():
+    return render_template('my_fair_lady.html')
+
+@app.route('/discover_your_show/revivals/cabaret')
+def explore_cabaret():
+    return render_template('cabaret.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

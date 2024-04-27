@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+My Fair Lady
+{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: rgb(242, 246, 238);
+    }
+    .btn:hover {
+        background-color: orange !important; /* Button color change on hover */
+        color: white !important;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="title" style="text-align: center;">My Fair Lady</h1>
+            <div class="separator-bar" style="height: 3px; background-color: darkgray; margin: 15px 0;"></div>
+
+            <p class="show-text" style="font-size: 21px;">
+                "My Fair Lady" is a classic Broadway musical based on George Bernard Shaw's play "Pygmalion." Set in Edwardian London, the story follows Eliza Doolittle, a Cockney flower girl, who undergoes a transformation under the guidance of phonetics professor Henry Higgins. With its memorable songs and timeless story of self-discovery and love, "My Fair Lady" has enchanted audiences for generations.
+            </p>
+            <p class="show-text" style="font-size: 21px; text-align: left;">
+                <strong style="font-size: 22px;">What You'll Discover:</strong><br>
+                - <strong>Story:</strong> Experience the charming tale of Eliza's journey from rags to refinement in Edwardian London.<br>
+                - <strong>Characters:</strong> Meet the memorable characters of Professor Higgins, Colonel Pickering, and Eliza Doolittle.<br>
+                - <strong>Music:</strong> Enjoy the unforgettable songs including "I Could Have Danced All Night" and "The Rain in Spain."<br>
+                - <strong>Legacy:</strong> Learn about the cultural impact and enduring popularity of "My Fair Lady" in the world of musical theatre.
+            </p>
+        </div>
+        
+        <div class="col-md-8">
+            <div class="video-container" style="position: relative; padding-bottom: 70%; height: 0; overflow: hidden;">
+                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/5GBQZ9uK3YI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="col-md-4 buttons-container">
+            <!-- Replace `#` with your actual links -->
+            <p class="info" style="background-color: lightgray;">
+                <strong style="font-size: 23px;">Instructions for Exploration:</strong><br>
+                1. Watch the Trailer: Get a glimpse of the musical's enchanting performances and iconic songs.<br>
+                2. Cast & Crew: Learn about the talented actors and production team behind "My Fair Lady."<br>
+                3. Reviews: Read critiques and audience reactions to this beloved Broadway classic.<br>
+                4. Tickets: Find out how you can experience the magic of Eliza's transformation live on stage.
+            </p>
+            <a href="https://www.lct.org/shows/my-fair-lady/" class="btn" style="background-color: yellow; color: black;">Official Website</a>
+            <a href="https://www.lct.org/shows/my-fair-lady/whos-who/" class="btn" style="background-color: yellow; color: black;">Cast & Crew</a>
+            <a href="https://www.nytimes.com/2018/04/19/theater/my-fair-lady-review-lincoln-center-lauren-ambrose.html" class="btn" style="background-color: yellow; color: black;">Reviews</a>
+            <a href="https://www.broadway.com/shows/my-fair-lady/" class="btn" style="background-color: yellow; color: black;">Tickets</a>
+        </div>
+    </div>
+    <div class="navigation-btns">
+        <a href="/discover_your_show/revival" class="btn" style="margin-bottom: 15px; background-color: rgb(67, 68, 66); color: yellow;">Back to Discover More Revival</a>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}

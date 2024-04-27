@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+The Wiz
+{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: rgb(242, 246, 238);
+    }
+    .btn:hover {
+        background-color: orange !important; /* Button color change on hover */
+        color: white !important;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="title" style="text-align: center;">The Wiz</h1>
+            <div class="separator-bar" style="height: 3px; background-color: darkgray; margin: 15px 0;"></div>
+
+            <p class="show-text" style="font-size: 21px;">
+                "The Wiz" is a beloved Broadway musical reimagining of "The Wizard of Oz," with a soulful and vibrant twist. Featuring an all-black cast and a fusion of Motown, gospel, and R&B music, the show follows Dorothy as she journeys through the magical land of Oz, encountering memorable characters like the Scarecrow, Tin Man, and Cowardly Lion along the way.
+            </p>
+            <p class="show-text" style="font-size: 21px; text-align: left;">
+                <strong style="font-size: 22px;">What You'll Discover:</strong><br>
+                - <strong>Story:</strong> Experience the enchanting tale of Dorothy's journey to find her way home.<br>
+                - <strong>Characters:</strong> Meet the iconic characters of Oz, reimagined with a fresh and soulful energy.<br>
+                - <strong>Music:</strong> Explore the dynamic soundtrack blending Motown, gospel, and R&B influences.<br>
+                - <strong>Legacy:</strong> Learn about the cultural impact and lasting influence of "The Wiz" on Broadway and beyond.
+            </p>
+        </div>
+        
+        <div class="col-md-8">
+            <div class="video-container" style="position: relative; padding-bottom: 70%; height: 0; overflow: hidden;">
+                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/QXaAreM5Y3w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="col-md-4 buttons-container">
+            <!-- Replace `#` with your actual links -->
+            <p class="info" style="background-color: lightgray;">
+                <strong style="font-size: 23px;">Instructions for Exploration:</strong><br>
+                1. Watch the Trailer: Get a glimpse of the musical's vibrant performances and catchy tunes.<br>
+                2. Cast & Crew: Learn about the talented actors and production team behind "The Wiz."<br>
+                3. Reviews: Read critiques and audience reactions to this beloved Broadway production.<br>
+                4. Tickets: Find out how you can experience the magic of Oz live on stage.
+            </p>
+            <a href="https://wizmusical.com/" class="btn" style="background-color: yellow; color: black;">Official Website</a>
+            <a href="https://wizmusical.com/cast-creative/" class="btn" style="background-color: yellow; color: black;">Cast & Crew</a>
+            <a href="https://www.newyorktheatreguide.com/show/27115-the-wiz-tickets?utm_source=google&utm_medium=cpc&utm_campaignid=15226401246&utm_adgroupid=158875622399&utm_adid=692814233510&utm_term=the+wiz+broadway&utm_matchtype=b&utm_campaign=TTG_NYTG_g_National_acq_search_shows&utm_adgroup=Shows_The_Wiz_All&gad_source=1&gclid=CjwKCAjwxLKxBhA7EiwAXO0R0B4wW9bJB2GWbzxkiInM5KaZCLQaBsSVE1463auKvtTLSRscfB7UzxoCeQ8QAvD_BwE" class="btn" style="background-color: yellow; color: black;">Reviews</a>
+            <a href="https://wizmusical.com/tickets/" class="btn" style="background-color: yellow; color: black;">Tickets</a>
+        </div>
+    </div>
+    <div class="navigation-btns">
+        <a href="/discover_your_show/revival" class="btn" style="margin-bottom: 15px; background-color: rgb(67, 68, 66); color: yellow;">Back to Discover More Revival</a>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}

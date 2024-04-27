@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Cabaret
+{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: rgb(242, 246, 238);
+    }
+    .btn:hover {
+        background-color: orange !important; /* Button color change on hover */
+        color: white !important;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="title" style="text-align: center;">Cabaret</h1>
+            <div class="separator-bar" style="height: 3px; background-color: darkgray; margin: 15px 0;"></div>
+
+            <p class="show-text" style="font-size: 21px;">
+                "Cabaret" is a captivating Broadway musical set in Berlin during the early 1930s, amidst the rise of the Nazi regime. The story unfolds at the Kit Kat Klub, where the Master of Ceremonies welcomes the audience to the decadent world of cabaret entertainment. Against this backdrop, the lives of an English cabaret performer named Sally Bowles and an American writer named Cliff Bradshaw become intertwined, as they navigate love, desire, and the looming political unrest.
+            </p>
+            <p class="show-text" style="font-size: 21px; text-align: left;">
+                <strong style="font-size: 22px;">What You'll Discover:</strong><br>
+                - <strong>Setting:</strong> Immerse yourself in the vibrant and provocative atmosphere of 1930s Berlin.<br>
+                - <strong>Characters:</strong> Meet the colorful inhabitants of the Kit Kat Klub, including the enigmatic Emcee and the spirited Sally Bowles.<br>
+                - <strong>Music:</strong> Experience the unforgettable score, featuring iconic songs like "Willkommen," "Cabaret," and "Maybe This Time."<br>
+                - <strong>Themes:</strong> Explore themes of love, sexuality, and political turmoil in a time of upheaval and uncertainty.
+            </p>
+        </div>
+        
+        <div class="col-md-8">
+            <div class="video-container" style="position: relative; padding-bottom: 70%; height: 0; overflow: hidden;">
+                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/j2fJ5n4Xk6M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="col-md-4 buttons-container">
+            <!-- Replace `#` with your actual links -->
+            <p class="info" style="background-color: lightgray;">
+                <strong style="font-size: 23px;">Instructions for Exploration:</strong><br>
+                1. Watch the Trailer: Get a glimpse of the musical's provocative performances and iconic songs.<br>
+                2. Cast & Crew: Learn about the talented actors and production team behind "Cabaret."<br>
+                3. Reviews: Read critiques and audience reactions to this compelling Broadway production.<br>
+                4. Tickets: Find out how you can experience the allure of the Kit Kat Klub live on stage.
+            </p>
+            <a href="https://kitkat.club/cabaret-broadway/?ch=fb&gad_source=1&gclid=CjwKCAjwxLKxBhA7EiwAXO0R0PKVxjluB9A7nzZ-Vvn7nFDqWArI7aNSgewD889oeqqvabbG56FLpRoCfUMQAvD_BwE" class="btn" style="background-color: yellow; color: black;">Official Website</a>
+            <a href="https://kitkat.club/cabaret-broadway/cast-and-creative/" class="btn" style="background-color: yellow; color: black;">Cast & Crew</a>
+            <a href="https://www.nytimes.com/2024/04/21/theater/cabaret-review-eddie-redmayne.html" class="btn" style="background-color: yellow; color: black;">Reviews</a>
+            <a href="https://kitkat.club/cabaret-broadway/tickets/" class="btn" style="background-color: yellow; color: black;">Tickets</a>
+        </div>
+    </div>
+    <div class="navigation-btns">
+        <a href="/discover_your_show/revival" class="btn" style="margin-bottom: 15px; background-color: rgb(67, 68, 66); color: yellow;">Back to Discover More Revival</a>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}
