@@ -17,10 +17,18 @@ Comedy
         transform: scale(1.05); /* Scale effect on hover */
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Shadow for depth */
     }
+    .btn {
+        background-color: rgb(67, 68, 66); 
+        color: yellow;
+        font-size: 18px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+    }
     .btn:hover {
-        background-color: #434442; /* Button color change on hover */
+        background-color: orange; /* Button color change on hover */
         color: white;
-    } 
+    }
 </style>
 <div class="container">
     <h1 class="title" style="text-align: center;">Comedy Shows:</h1>
@@ -69,6 +77,9 @@ Comedy
             </div>
         </div>
         
+        </div>
+        <div class="navigation-btns">
+            <a href="/discover_your_show" class="btn" style="margin-bottom: 15px; background-color: rgb(67, 68, 66); color: yellow;">Back to Discover More Genres</a>
         </div>
 </div>
 {% endblock %}

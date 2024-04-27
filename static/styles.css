@@ -278,3 +278,8 @@ body {
 .button-home:hover {
     background-color: orange; /* Darker blue on hover */
 }
+.navigation-btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
