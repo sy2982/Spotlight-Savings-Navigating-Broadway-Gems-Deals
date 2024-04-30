@@ -181,8 +181,8 @@ h1 {
     border-left: 5px solid red;
 }
 .redo-button {
-    background-color: #4CAF50; /* Green background */
-    color: white;
+    background-color: rgb(67, 68, 66);
+    color: yellow;
     padding: 12px 20px;
     margin: 20px 0;
     border: none;
@@ -192,6 +192,7 @@ h1 {
 }
 
 .redo-button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: yellow;
+    color: rgb(67, 68, 66);
 }
 
