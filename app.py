@@ -17,36 +17,76 @@ user_responses = {}
 @app.route('/')
 def home():
     return render_template('index.html')
-
+"""
 @app.route('/quiz/<int:quiz_id>', methods=['GET', 'POST'])
 def quiz(quiz_id):
     if request.method == 'POST':
-        # Save user response
         user_response = request.form.get('option')
         user_responses[quiz_id] = user_response
 
     quiz = quizzes.get(quiz_id)
     if quiz is None:
-        return redirect(url_for('home'))  # Redirect to home if the quiz does not exist
+        return redirect(url_for('home'))
 
-    # Retrieve previous response if it exists
     previous_response = user_responses.get(quiz_id)
 
-    return render_template('quiz.html', quiz=quiz, quiz_id=quiz_id, total_quizzes=len(quizzes), response=previous_response)
+    # Prepare progress data
+    progress = {}
+    for id, data in quizzes.items():
+        progress[id] = {
+            'completed': id in user_responses,
+            'user_answer': user_responses.get(id)
+        }
 
+    return render_template('quiz.html', quiz=quiz, quiz_id=quiz_id, total_quizzes=len(quizzes), response=previous_response, progress=progress)
+"""
+@app.route('/quiz/<int:quiz_id>', methods=['GET', 'POST'])
+def quiz(quiz_id):
+    if request.method == 'POST':
+        user_response = request.form.get('option')
+        if user_response:  # Make sure there is a response before saving
+            user_responses[quiz_id] = user_response
+
+        # Redirect to the next quiz, or to the results if it's the last quiz
+        next_quiz_id = quiz_id + 1
+        if next_quiz_id <= len(quizzes):
+            return redirect(url_for('quiz', quiz_id=next_quiz_id))
+        else:
+            return redirect(url_for('results'))
+
+    quiz = quizzes.get(quiz_id)
+    if quiz is None:
+        return redirect(url_for('home'))
+
+    previous_response = user_responses.get(quiz_id)
+
+    # Prepare progress data
+    progress = {}
+    for id, data in quizzes.items():
+        progress[id] = {
+            'completed': id in user_responses,
+            'user_answer': user_responses.get(id)
+        }
+
+    return render_template('quiz.html', quiz=quiz, quiz_id=quiz_id, total_quizzes=len(quizzes), response=previous_response, progress=progress)
 
 @app.route('/results')
 def results():
     results_data = []
-    for quiz_id, user_response in user_responses.items():
-        question_data = quizzes[quiz_id]
+    for quiz_id, question_data in quizzes.items():
+        user_response = user_responses.get(quiz_id, "Did not answer")  # Get user's answer or default to "Did not answer"
+        is_correct = (user_response == question_data['answer'])
         results_data.append({
             'question': question_data['question'],
             'user_answer': user_response,
             'correct_answer': question_data['answer'],
-            'is_correct': user_response == question_data['answer']
+            'is_correct': is_correct
         })
     return render_template('quiz_results.html', results=results_data)
+@app.route('/restart', methods=['GET', 'POST'])
+def restart_quiz():
+    user_responses.clear()  # Clear all entries in the user_responses dictionary
+    return redirect(url_for('quiz', quiz_id=1))
 
 @app.route('/discover_your_show')
 def discover_your_show():

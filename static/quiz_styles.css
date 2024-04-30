@@ -2,16 +2,77 @@
 body {
     background-color: rgb(242, 246, 238); /* Set the background color to yellow */
 }
+#c {
+    width: 70%;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    display: flex;
+    min-height: 50vh; /* Ensures full vertical height */
+    align-items: stretch; /* Ensures children stretch to the same height */
+}
+
+/* Sidebar styles */
+.sidebar a.quiz-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sidebar a.quiz-link:hover {
+    text-decoration: underline;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0px 5px rgba(0,0,0,0.1); /* Adds a slight shadow to the sidebar */
+    margin-right: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Removes default margin */
+}
+
+.sidebar ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9em;
+}
+
+.sidebar ul li.completed {
+    color: #4CAF50;
+}
+
+.sidebar ul li.not-completed {
+    color: #f44336;
+}
+
+/* Quiz container styles */
 .quiz-container {
-    max-width: 600px;
-    margin: auto;
-    background-color:#fff;
+    flex: 1; /* Allows container to fill the remaining horizontal space */
+    display: flex;
+    justify-content: center; /* Centers the quiz card horizontally */
+    background-color: #e9ecef; /* Light background for the quiz area */
+     margin-left: 20px;
+    margin-right: 20px;
 }
 .card {
-    padding: 20px;
+    flex: 1;
+    padding: 40px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
 }
 
 h1 {
@@ -62,36 +123,27 @@ h1 {
     border-radius: 50%;
     background: #2196F3; /* Change inner circle color when checked */
 }
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Ensures buttons are evenly spaced */
+    align-items: center;
+}
 
-
-#submit-btn {
+#submit-btn, .prev-next-btn {
+    flex: 1 1 50%; /* Ensures each button can grow to fill 50% of the container */
+    max-width: 50%; /* Prevents any button from exceeding half of the container's width */
     background-color: rgb(67, 68, 66);
     color: yellow;
     padding: 14px 20px;
-    margin: 10px 0;
+    margin: 10px 5px; /* Small margin for spacing between buttons */
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.prev-next-btn {
-    background-color: rgb(67, 68, 66);
-    color: yellow;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-.prev-next-btn:hover {
-   background-color: yellow;
+.prev-next-btn:hover, #submit-btn:hover {
+    background-color: yellow;
     color: rgb(67, 68, 66);
 }
 #submit-btn.active {
@@ -128,3 +180,18 @@ h1 {
 .result-item.incorrect {
     border-left: 5px solid red;
 }
+.redo-button {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 12px 20px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.redo-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+

@@ -5,30 +5,47 @@
        <link rel="stylesheet" href="{{ url_for('static', filename='quiz_styles.css') }}">
 {% endblock %}
 {% block content %}
-<div class="quiz-container">
-    <div id="question-card" class="card">
-        <h1 class="title">Question</h1>
-        <p>{{ quiz.question }}</p>
-        <form id="quiz-form" method="POST">
-            <div class="options-container">
-                {% for option in quiz.options %}
-                <label class="option">
-                    <input type="radio" name="option" value="{{ option }}" id="{{ option }}" {{ 'checked' if response == option else '' }}>
-                    <span class="checkmark"></span>
-                    <span class="option-text">{{ option }}</span>
-                </label>
-                {% endfor %}
-            </div>
-            <button type="submit" id="submit-btn">Submit</button>
-        </form>
-    {% if quiz_id > 1 %}
-        <a href="{{ url_for('quiz', quiz_id=quiz_id-1) }}" class="prev-next-btn">Previous</a>
-    {% endif %}
-    {% if quiz_id < total_quizzes %}
-        <a href="{{ url_for('quiz', quiz_id=quiz_id+1) }}" class="prev-next-btn">Next</a>
-    {% else %}
-        <a href="{{ url_for('results') }}" class="prev-next-btn">See Results</a>
-    {% endif %}
+<div id="c">
+    <div class="sidebar">
+   <h2>Quiz Progress</h2>
+   <ul>
+       {% for id, data in progress.items() %}
+       <li>
+           <a href="{{ url_for('quiz', quiz_id=id) }}" class="quiz-link">
+               Quiz {{ id }}:
+               {% if data.completed %}
+               Completed (Answer: {{ data.user_answer }})
+               {% else %}
+               Not completed
+               {% endif %}
+           </a>
+       </li>
+       {% endfor %}
+   </ul>
+</div>
+
+    <div class="quiz-container">
+        <div id="question-card" class="card">
+            <h1 class="title">Question {{ quiz_id }}</h1>
+            <p>{{ quiz.question }}</p>
+            <form id="quiz-form" method="POST">
+                <div class="options-container">
+                    {% for option in quiz.options %}
+                    <label class="option">
+                        <input type="radio" name="option" value="{{ option }}" id="{{ option }}" {{ 'checked' if response == option else '' }}>
+                        <span class="checkmark"></span>
+                        <span class="option-text">{{ option }}</span>
+                    </label>
+                    {% endfor %}
+                </div>
+                <div class="button-container">
+                    {% if quiz_id > 1 %}
+                    <button type="button" class="prev-next-btn" onclick="location.href='{{ url_for('quiz', quiz_id=quiz_id-1) }}'">Previous</button>
+                    {% endif %}
+                    <button type="submit" id="submit-btn">Submit & Next</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 {% endblock %}

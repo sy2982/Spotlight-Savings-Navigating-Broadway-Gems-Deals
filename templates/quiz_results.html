@@ -3,20 +3,23 @@
 {% block title %}Results{% endblock %}
 
 {% block head %}
-       <link rel="stylesheet" href="{{ url_for('static', filename='quiz_styles.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='quiz_styles.css') }}">
 {% endblock %}
+
 {% block content %}
 <div class="results-container">
-    <h1 class="title">Quiz Results</h1>
-    <ul class="results-list">
-        {% for result in results %}
-        <li class="result-item {{ 'correct' if result.is_correct else 'incorrect' }}">
-            <p><strong>Question:</strong> {{ result.question }}</p>
-            <p><strong>Your Answer:</strong> {{ result.user_answer }}</p>
-            <p><strong>Correct Answer:</strong> {{ result.correct_answer }}</p>
-        </li>
-        {% endfor %}
-    </ul>
+   <h1 class="title">Quiz Results</h1>
+   <ul class="results-list">
+       {% for result in results %}
+       <li class="result-item {{ 'correct' if result.is_correct else 'incorrect' }}">
+           <p><strong>Question:</strong> {{ result.question }}</p>
+           <p><strong>Your Answer:</strong> {{ result.user_answer }}</p>
+           <p><strong>Correct Answer:</strong> {{ result.correct_answer }}</p>
+       </li>
+       {% endfor %}
+   </ul>
+   <button onclick="location.href='{{ url_for('restart_quiz') }}'" class="redo-button">Redo Quiz</button>
 </div>
 {% endblock %}
+
 
