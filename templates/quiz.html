@@ -42,7 +42,11 @@
                     {% if quiz_id > 1 %}
                     <button type="button" class="prev-next-btn" onclick="location.href='{{ url_for('quiz', quiz_id=quiz_id-1) }}'">Previous</button>
                     {% endif %}
-                    <button type="submit" id="submit-btn">Submit & Next</button>
+                    {% if quiz_id == 5 %}
+                    <button type="submit" id="submit-btn">Submit</button>
+                    {% else %}
+                    <button type="submit" id="submit-btn">Next</button>
+                    {% endif %}
                 </div>
             </form>
         </div>
