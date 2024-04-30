@@ -1,6 +1,6 @@
 # Spotlight Savings: Navigating Broadway Gems & Deals
 
-Spotlight Savings is a web application designed to help users navigate Broadway shows, discover hidden gems, and find great deals on tickets. Whether you're a seasoned theatergoer or a newcomer to Broadway, Spotlight Savings has something for everyone.
+Spotlight Savings is a web application designed to help users learn and navigate Broadway shows, discover hidden gems, and find great deals on tickets. Whether you're a seasoned theatergoer or a newcomer to Broadway, Spotlight Savings has something for everyone.
 
 ## Deployed Application
 
@@ -45,8 +45,8 @@ Contributions to the project are welcome! If you find any bugs, have feature req
 
 ### Contributors
 
-- [Ruairui Guo](https://github.com/ruanqirui)
-- [Xiaoning Bai](https://github.com/xiaoningB)
+- [Qirui Ruan](https://github.com/ruanqirui)
+- [Xiaoning Bu](https://github.com/xiaoningB)
 
 ## License
 
