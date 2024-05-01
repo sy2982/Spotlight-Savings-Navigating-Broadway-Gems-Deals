@@ -256,6 +256,7 @@ body {
     top: 0;
     left: 0;
     min-height: 300px;
+    height: 750px;
 }
 .title-sub {
     font-family: "Playfair Display", serif;
