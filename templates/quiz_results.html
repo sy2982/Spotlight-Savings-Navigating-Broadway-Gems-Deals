@@ -9,6 +9,9 @@
 {% block content %}
 <div class="results-container">
    <h1 class="title">Quiz Results</h1>
+   <p class="score" style="font-size: 23px;">
+    Score: {{ results|selectattr('is_correct')|list|length }} out of {{ results|length }}
+    </p>
    <ul class="results-list">
        {% for result in results %}
        <li class="result-item {{ 'correct' if result.is_correct else 'incorrect' }}">
