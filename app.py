@@ -7,8 +7,10 @@ quizzes = {
     1: {'question': 'Which of the following is NOT a genre of Broadway shows?', 'options': ['Musicals', 'Plays (Drama)', 'Opera', 'Comedy'], 'answer': 'Opera'},
     2: {'question': 'Which Broadway show is known for blending hip-hop, jazz, R&B, and Broadway styles to tell the story of American Founding Father Alexander Hamilton?', 'options': ['Hamilton', 'The Phantom of the Opera', 'Chicago', 'West Side Story'], 'answer': 'Hamilton'},
     3: {'question': 'What are Rush Tickets?', 'options': ['Tickets sold at a discount for students only', 'Tickets offered at the day of the performance, usually when the box office opens, at a discount', 'Expensive tickets for premium seats', 'Tickets you can win through a lottery'], 'answer': 'Tickets offered at the day of the performance, usually when the box office opens, at a discount'},
-    4: {'question': 'Which of the following is a primary ticket seller for many Broadway shows?', 'options': ['StubHub', 'SeatGeek', 'Telecharge', 'Vivid Seats'], 'answer': 'Telecharge'},
-    5: {'question': 'To avoid overpaying for tickets, what should you check first?', 'options': ['TKTS Booths in Times Square', 'Secondary market platforms like StubHub', 'The box office and official show website', 'Digital lotteries'], 'answer': 'The box office and official show website'}
+    # 4: {'question': 'Which of the following is a primary ticket seller for many Broadway shows?', 'options': ['StubHub', 'SeatGeek', 'Telecharge', 'Vivid Seats'], 'answer': 'Telecharge'},
+    4: {'question': 'To avoid overpaying for tickets, what should you check first?', 'options': ['TKTS Booths in Times Square', 'Secondary market platforms like StubHub', 'The box office and official show website', 'Digital lotteries'], 'answer': 'The box office and official show website'},
+    5: {'question': 'What is a "Revival" in the context of Broadway shows?', 'options': ['A newly written play or musical', 'A repeat performance of a show on the same day', 'A new version of a previously produced show', 'An award given to the best new show'], 'answer': 'A new version of a previously produced show'},
+    6: {'question': 'If you were attending a Broadway show and wanted to meet the cast after the performance, where should you go? [Bonus Question]', 'options': ['The nearest coffee shop', 'The stage door', 'Their home', 'Backstage without permission'], 'answer': 'The stage door'}
 }
 
 # In-memory storage for user responses

@@ -6,7 +6,7 @@
 {% endblock %}
 {% block content %}
 <div id="c">
-    <div class="sidebar">
+    <div class="sidebar" style="font-size: 18px;">
    <h2>Quiz Progress</h2>
    <ul>
        {% for id, data in progress.items() %}
@@ -27,9 +27,9 @@
     <div class="quiz-container">
         <div id="question-card" class="card">
             <h1 class="title">Question {{ quiz_id }}</h1>
-            <p>{{ quiz.question }}</p>
+            <p style="font-size: 23px;">{{ quiz.question }}</p>
             <form id="quiz-form" method="POST">
-                <div class="options-container">
+                <div class="options-container" style="font-size: 22px;">
                     {% for option in quiz.options %}
                     <label class="option">
                         <input type="radio" name="option" value="{{ option }}" id="{{ option }}" {{ 'checked' if response == option else '' }}>
@@ -42,7 +42,7 @@
                     {% if quiz_id > 1 %}
                     <button type="button" class="prev-next-btn" onclick="location.href='{{ url_for('quiz', quiz_id=quiz_id-1) }}'">Previous</button>
                     {% endif %}
-                    {% if quiz_id == 5 %}
+                    {% if quiz_id == 6 %}
                     <button type="submit" id="submit-btn">Submit</button>
                     {% else %}
                     <button type="submit" id="submit-btn">Next</button>
